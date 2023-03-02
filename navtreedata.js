@@ -31,11 +31,11 @@ var NAVTREE =
         [ "Benefits of SDK", "page1.html#autotoc_md12", null ]
       ] ],
       [ "How Ludeo Works", "page1.html#autotoc_md13", [
-        [ "First Step", "page1.html#autotoc_md14", null ],
-        [ "Second Step", "page1.html#autotoc_md15", null ],
-        [ "Third Step", "page1.html#autotoc_md16", null ],
-        [ "Fourth Step", "page1.html#autotoc_md17", null ],
-        [ "Fifth Step", "page1.html#autotoc_md18", null ]
+        [ "#1 Capture the Gameplay", "page1.html#autotoc_md14", null ],
+        [ "#2 Process Key Information from the Gameplay", "page1.html#autotoc_md15", null ],
+        [ "#3 Stores the Key Information", "page1.html#autotoc_md16", null ],
+        [ "#4 Configure the Ludeo", "page1.html#autotoc_md17", null ],
+        [ "#5 Ludeo is Ready", "page1.html#autotoc_md18", null ]
       ] ]
     ] ],
     [ "Adding Ludeo to Your Game", "page2.html", [
