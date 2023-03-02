@@ -25,8 +25,19 @@
 var NAVTREE =
 [
   [ "Ludeo SDK", "index.html", [
-    [ "What is Ludeo?", "index.html", null ],
-    [ "How It Works?", "page1.html", null ],
+    [ "What is Ludeo?", "index.html", "index" ],
+    [ "How It Works?", "page1.html", [
+      [ "Why use SDK?", "page1.html#autotoc_md11", [
+        [ "Benefits of SDK", "page1.html#autotoc_md12", null ]
+      ] ],
+      [ "How Ludeo Works", "page1.html#autotoc_md13", [
+        [ "First Step", "page1.html#autotoc_md14", null ],
+        [ "Second Step", "page1.html#autotoc_md15", null ],
+        [ "Third Step", "page1.html#autotoc_md16", null ],
+        [ "Fourth Step", "page1.html#autotoc_md17", null ],
+        [ "Fifth Step", "page1.html#autotoc_md18", null ]
+      ] ]
+    ] ],
     [ "Adding Ludeo to Your Game", "page2.html", [
       [ "Dependencies", "page2.html#section1", null ],
       [ "Setup and Install", "page2.html#section2", null ],
