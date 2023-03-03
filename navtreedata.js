@@ -26,24 +26,44 @@ var NAVTREE =
 [
   [ "Ludeo SDK", "index.html", [
     [ "What is Ludeo?", "index.html", "index" ],
-    [ "How It Works?", "page1.html", [
-      [ "Why use SDK?", "page1.html#autotoc_md11", [
-        [ "Benefits of SDK", "page1.html#autotoc_md12", null ]
+    [ "How It Works?", "howitworks.html", [
+      [ "Why use SDK?", "howitworks.html#autotoc_md13", [
+        [ "Benefits of SDK", "howitworks.html#autotoc_md14", null ]
       ] ],
-      [ "How Ludeo Works", "page1.html#autotoc_md13", [
-        [ "#1 Capture the Gameplay", "page1.html#autotoc_md14", null ],
-        [ "#2 Process Key Information from the Gameplay", "page1.html#autotoc_md15", null ],
-        [ "#3 Stores the Key Information", "page1.html#autotoc_md16", null ],
-        [ "#4 Configure the Ludeo", "page1.html#autotoc_md17", null ],
-        [ "#5 Ludeo is Ready", "page1.html#autotoc_md18", null ]
+      [ "How Ludeo Works", "howitworks.html#autotoc_md15", [
+        [ "Step 1: Integrate your Game", "howitworks.html#autotoc_md16", null ],
+        [ "Step2: The Creator Makes a Ludeo", "howitworks.html#autotoc_md17", null ],
+        [ "Step 3: The Player Plays the Ludeo", "howitworks.html#autotoc_md18", null ]
+      ] ],
+      [ "Ludeo Architecture", "howitworks.html#autotoc_md19", [
+        [ "Tracking Your Game", "howitworks.html#autotoc_md20", null ],
+        [ "Uploading Gameplay Media", "howitworks.html#autotoc_md21", null ],
+        [ "Game Manger", "howitworks.html#autotoc_md22", null ],
+        [ "Creator Lab", "howitworks.html#autotoc_md23", null ],
+        [ "Ludeo Manger", "howitworks.html#autotoc_md24", null ],
+        [ "Ludeo Player", "howitworks.html#autotoc_md25", null ]
       ] ]
     ] ],
     [ "Adding Ludeo to Your Game", "page2.html", [
       [ "Dependencies", "page2.html#section1", null ],
       [ "Setup and Install", "page2.html#section2", null ],
+      [ "How to Install Sample App", "page2.html#installsampleapp", [
+        [ "Step 1: Download or Clone the Sample App Repo", "page2.html#autotoc_md26", null ],
+        [ "Step 2: Open the Project", "page2.html#autotoc_md27", null ],
+        [ "Step 3: Start the Sample Application", "page2.html#autotoc_md28", null ],
+        [ "Step 4: Play the Game", "page2.html#autotoc_md29", null ]
+      ] ],
       [ "User Flows", "page2.html#section3", [
-        [ "Creator", "page2.html#subsection1", null ],
-        [ "Player", "page2.html#subsection2", null ]
+        [ "Creator", "page2.html#autotoc_md30", [
+          [ "Step 1: Creator Launch the Game", "page2.html#autotoc_md31", null ],
+          [ "Step 2: Play the Game", "page2.html#autotoc_md32", null ],
+          [ "Step 3: Capture the Highlight", "page2.html#autotoc_md33", null ]
+        ] ],
+        [ "Player", "page2.html#autotoc_md34", [
+          [ "Step 1: Player Launch Ludeo", "page2.html#autotoc_md35", null ],
+          [ "Step 2: Player Plays Ludeo", "page2.html#autotoc_md36", null ],
+          [ "Step 3: Summary", "page2.html#autotoc_md37", null ]
+        ] ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
