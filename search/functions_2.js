@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['test_0',['test',['../class_my_library_1_1_example.html#a1c0046b0674eb4cad09c5d3e943912b8',1,'MyLibrary::Example']]]
+  ['endgameplay_0',['EndGameplay',['../class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7',1,'LudeoSDK::LudeoManager']]]
 ];

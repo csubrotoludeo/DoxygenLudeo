@@ -47,34 +47,39 @@ var NAVTREE =
     [ "Adding Ludeo to Your Game", "integrartion.html", [
       [ "Dependencies", "integrartion.html#dependencies", null ],
       [ "Setup and Install", "integrartion.html#installation", [
-        [ "Prerequisites", "integrartion.html#autotoc_md29", null ],
-        [ "Integration", "integrartion.html#autotoc_md30", [
-          [ "Step 1: Set Game ID", "integrartion.html#autotoc_md31", null ],
-          [ "Step 2: Initialize LudeoDK", "integrartion.html#autotoc_md32", null ]
+        [ "Prerequisites", "integrartion.html#autotoc_md30", null ],
+        [ "Integration", "integrartion.html#autotoc_md31", [
+          [ "Step 1: Set Game ID", "integrartion.html#autotoc_md32", null ],
+          [ "Step 2: Initialize LudeoDK", "integrartion.html#autotoc_md33", null ]
         ] ]
       ] ],
       [ "How to Install Sample App", "integrartion.html#installsampleapp", [
-        [ "Step 1: Download or Clone the Sample App Repo", "integrartion.html#autotoc_md33", null ],
-        [ "Step 2: Open the Project", "integrartion.html#autotoc_md34", null ],
-        [ "Step 3: Start the Sample Application", "integrartion.html#autotoc_md35", null ],
-        [ "Step 4: Play the Game", "integrartion.html#autotoc_md36", null ]
+        [ "Step 1: Download or Clone the Sample App Repo", "integrartion.html#autotoc_md34", null ],
+        [ "Step 2: Open the Project", "integrartion.html#autotoc_md35", null ],
+        [ "Step 3: Start the Sample Application", "integrartion.html#autotoc_md36", null ],
+        [ "Step 4: Play the Game", "integrartion.html#autotoc_md37", null ]
       ] ],
       [ "User Flows", "integrartion.html#section3", [
-        [ "Creator", "integrartion.html#autotoc_md37", [
-          [ "Step 1: Creator Launch the Game", "integrartion.html#autotoc_md38", null ],
-          [ "Step 2: Play the Game", "integrartion.html#autotoc_md39", null ],
-          [ "Step 3: Capture the Highlight", "integrartion.html#autotoc_md40", null ]
+        [ "Creator", "integrartion.html#autotoc_md38", [
+          [ "Step 1: Creator Launch the Game", "integrartion.html#autotoc_md39", null ],
+          [ "Step 2: Play the Game", "integrartion.html#autotoc_md40", null ],
+          [ "Step 3: Capture the Highlight", "integrartion.html#autotoc_md41", null ]
         ] ],
-        [ "Player", "integrartion.html#autotoc_md41", [
-          [ "Step 1: Player Launch Ludeo", "integrartion.html#autotoc_md42", null ],
-          [ "Step 2: Player Plays Ludeo", "integrartion.html#autotoc_md43", null ],
-          [ "Step 3: Summary", "integrartion.html#autotoc_md44", null ]
+        [ "Player", "integrartion.html#autotoc_md42", [
+          [ "Step 1: Player Launch Ludeo", "integrartion.html#autotoc_md43", null ],
+          [ "Step 2: Player Plays Ludeo", "integrartion.html#autotoc_md44", null ],
+          [ "Step 3: Summary", "integrartion.html#autotoc_md45", null ]
         ] ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ]
+      [ "Class Index", "classes.html", null ],
+      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
+      [ "Class Members", "functions.html", [
+        [ "All", "functions.html", null ],
+        [ "Functions", "functions_func.html", null ]
+      ] ]
     ] ]
   ] ]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['long_5ffunction_5fwith_5fmany_5fparameters_0',['long_function_with_many_parameters',['../class_my_library_1_1_subclass_example.html#a92227fff4f72a11be0e21d88914ba63e',1,'MyLibrary::SubclassExample']]]
+  ['begingameplay_0',['BeginGameplay',['../class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae',1,'LudeoSDK::LudeoManager']]]
 ];

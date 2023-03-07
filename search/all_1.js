@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gameplaydefinitions_0',['GameplayDefinitions',['../class_ludeo_s_d_k_1_1_gameplay_definitions.html',1,'LudeoSDK']]]
+  ['begingameplay_0',['BeginGameplay',['../class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae',1,'LudeoSDK::LudeoManager']]]
 ];
