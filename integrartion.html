@@ -151,9 +151,10 @@ Step 1: Set Steam Player ID</h3>
 <li>Select <b>Editor</b>.</li>
 <li>Open the <b>PlatformSetter</b> with your <b>Code Editor</b>.</li>
 <li>Head to <b>TestSettingsPerUser</b> method.</li>
-<li>Add your <b>Steam Player Id</b> with the same format as the rest of the code.</li>
+<li>Add your <b>Steam Player Id</b> by using the code below:</li>
 </ul>
-<div class="image">
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> TestsSettings &lt;yourPlayerUsername&gt;  = <span class="keyword">new</span> TestsSettings() { steamId = &lt;yourSteamId&gt; };  </div>
+</div><!-- fragment --><div class="image">
 <img src="integration1.gif" alt=""/>
 </div>
 <h3><a class="anchor" id="autotoc_md33"></a>
@@ -164,9 +165,10 @@ Step 2: Set API Key</h3>
 <li>Select <b>Editor</b>.</li>
 <li>Open the <b>PlatformSetter</b> with your <b>Code Editor</b>.</li>
 <li>Head to <b>TestSettingsPerGame</b> method.</li>
-<li>Add your <b>apiKey</b> and specify the game name.</li>
+<li>Add your <b>apiKey</b> and specify the game name by using the code below:</li>
 </ul>
-<div class="image">
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> TestsSettings &lt;yourGameName&gt;= <span class="keyword">new</span> TestsSettings() { gameName = &lt;yourGameName&gt;,apiKey = &lt;yourApiKey&gt;, ludeoId = <span class="stringliteral">&quot;&quot;</span> };</div>
+</div><!-- fragment --><div class="image">
 <img src="integration2.gif" alt=""/>
 </div>
 <h3><a class="anchor" id="autotoc_md34"></a>
