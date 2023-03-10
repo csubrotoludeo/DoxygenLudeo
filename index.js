@@ -7,7 +7,7 @@ var index =
       [ "Ludeo Replayer", "index.html#autotoc_md4", null ]
     ] ],
     [ "How It Works?", "index.html#autotoc_md5", [
-      [ "Why use SDK?", "index.html#autotoc_md6", [
+      [ "Why Use SDK?", "index.html#autotoc_md6", [
         [ "Benefits of SDK", "index.html#autotoc_md7", null ]
       ] ],
       [ "How Ludeo Works", "index.html#autotoc_md8", [
