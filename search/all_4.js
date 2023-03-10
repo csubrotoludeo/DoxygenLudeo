@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['how_20it_20works_3f_0',['How It Works?',['../howitworks.html',1,'']]]
+  ['init_0',['Init',['../class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad',1,'LudeoSDK::LudeoManager']]],
+  ['introduction_1',['Introduction',['../index.html',1,'']]]
 ];

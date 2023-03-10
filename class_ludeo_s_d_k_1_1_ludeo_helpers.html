@@ -155,7 +155,18 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Get the Url towards which the SDK directs. </p>
 <dl class="section return"><dt>Returns</dt><dd>The Ludeo platform Url</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (<a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.Instance != <span class="keyword">null</span>)</div>
+<div class="line">        <span class="keywordflow">return</span> <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.Instance.GetLudeoPlatformUrl();</div>
+<div class="line">    <span class="keywordflow">else</span></div>
+<div class="line">    {</div>
+<div class="line">        Logger.AlwaysOnErrorMessage(<span class="stringliteral">&quot;You must call Init before requesting Ludeo service URL&quot;</span>);</div>
+<div class="line">        <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Empty;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoSDK.LudeoManager</a></div><div class="ttdoc">Enables Ludeos in your game.</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:26</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a1d324365a5b38bcbb6fd3bcba07a9755" name="a1d324365a5b38bcbb6fd3bcba07a9755"></a>
@@ -189,7 +200,11 @@ Static Public Member Functions</h2></td></tr>
   </table>
   </dd>
 </dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(LudeoLogLevel logLeve)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoManager.Instance != <span class="keyword">null</span> ? <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.Instance.SetLogLevel(logLevel) : <span class="keyword">false</span>;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

@@ -117,12 +117,6 @@ $(document).ready(function(){initNavTree('class_ludeo_s_d_k_1_1_ludeo_manager.ht
 
 <p>Enables Ludeos in your game.  
  <a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#details">More...</a></p>
-<div class="dynheader">
-Inheritance diagram for LudeoSDK.LudeoManager:</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_ludeo_s_d_k_1_1_ludeo_manager.png" alt=""/>
- </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -215,624 +209,6 @@ Static Public Member Functions</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Enables Ludeos in your game. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a id="a9e4096b49c368381611a51d5ac6764d9" name="a9e4096b49c368381611a51d5ac6764d9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9e4096b49c368381611a51d5ac6764d9">&#9670;&#160;</a></span>AbortGameplay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static void LudeoSDK.LudeoManager.AbortGameplay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Abort the current Gameplay. All Ludeo data will be lost. </p>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
-</div>
-</div>
-<a id="a5a2711f465756515c5f736ae4b518eae" name="a5a2711f465756515c5f736ae4b518eae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a2711f465756515c5f736ae4b518eae">&#9670;&#160;</a></span>BeginGameplay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.BeginGameplay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Begin a session according to the current LudeoModeType you've set. </p>
-<dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if begin gameplay is successful or LudeoMessage.Error_Need_Init_First if begin gameplay is error</dd></dl>
-
-</div>
-</div>
-<a id="aa01f6fceadc8ea2ea214c3ecbc5c8ba7" name="aa01f6fceadc8ea2ea214c3ecbc5c8ba7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">&#9670;&#160;</a></span>EndGameplay()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.EndGameplay </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>End the current session if running. </p>
-<dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if end gameplay is successful</dd></dl>
-
-</div>
-</div>
-<a id="a6bd3f0d1536748032481759839a27e04" name="a6bd3f0d1536748032481759839a27e04"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6bd3f0d1536748032481759839a27e04">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[1/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out bool&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a definition saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
-    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="a36af8181eff8231e76f73a37f4c0181e" name="a36af8181eff8231e76f73a37f4c0181e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a36af8181eff8231e76f73a37f4c0181e">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[2/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out float&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a definition saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
-    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="a93d9d128fac49eae30bd84cd576ef493" name="a93d9d128fac49eae30bd84cd576ef493"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a93d9d128fac49eae30bd84cd576ef493">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[3/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a definition saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
-    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="aa99ab9243dec614bcb2d5e12a33a1b81" name="aa99ab9243dec614bcb2d5e12a33a1b81"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa99ab9243dec614bcb2d5e12a33a1b81">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[4/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out string&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a definition saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
-    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="a4344f2d4bb88b4788242420470ad3ed0" name="a4344f2d4bb88b4788242420470ad3ed0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4344f2d4bb88b4788242420470ad3ed0">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[5/5]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out Vec3&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get a definition saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
-    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="a732fafb70e96054616a7f2dcf4bd331d" name="a732fafb70e96054616a7f2dcf4bd331d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a732fafb70e96054616a7f2dcf4bd331d">&#9670;&#160;</a></span>GetGameplayDefinitionsKeys()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinitionsKeys </td>
-          <td>(</td>
-          <td class="paramtype">LudeoParam&#160;</td>
-          <td class="paramname"><em>paramType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out string[]&#160;</td>
-          <td class="paramname"><em>keys</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the array of definitions' keys of certain param type of the Ludeo highlight to replay. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">paramType</td><td>The type of parameter</td></tr>
-    <tr><td class="paramname">keys</td><td>The array of keys found</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Error_Need_Init_First</dd></dl>
-
-</div>
-</div>
-<a id="ac2d0e937c15c0e181354e13dcd1cf3df" name="ac2d0e937c15c0e181354e13dcd1cf3df"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac2d0e937c15c0e181354e13dcd1cf3df">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[1/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out bool&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the value of a field saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
-    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="aa736d805259ee585643d629b8cdbb99c" name="aa736d805259ee585643d629b8cdbb99c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa736d805259ee585643d629b8cdbb99c">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[2/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out float&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the value of a field saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
-    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="a528c643615bc4ffc84c7a528f32b5e57" name="a528c643615bc4ffc84c7a528f32b5e57"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a528c643615bc4ffc84c7a528f32b5e57">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[3/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out int&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the value of a field saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
-    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="a1ea273eba9c75f49c1f15e2644cf6681" name="a1ea273eba9c75f49c1f15e2644cf6681"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1ea273eba9c75f49c1f15e2644cf6681">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[4/4]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
-          <td>(</td>
-          <td class="paramtype">string&#160;</td>
-          <td class="paramname"><em>key</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out Vec3&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the value of a field saved in the highlight. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
-    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-
-</div>
-</div>
-<a id="ad21c8c94907caeb05716f8ee57b48348" name="ad21c8c94907caeb05716f8ee57b48348"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad21c8c94907caeb05716f8ee57b48348">&#9670;&#160;</a></span>GetGameplayStateKeys()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayStateKeys </td>
-          <td>(</td>
-          <td class="paramtype">LudeoParam&#160;</td>
-          <td class="paramname"><em>paramType</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">out string[]&#160;</td>
-          <td class="paramname"><em>keys</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get the array of variables' keys of certain param type of the Ludeo. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">paramType</td><td>The type of parameter</td></tr>
-    <tr><td class="paramname">keys</td><td>The array of keys found</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Error_Need_Init_First</dd></dl>
-
-</div>
-</div>
-<a id="aac6e9b2cf676f2fae86678015debac0d" name="aac6e9b2cf676f2fae86678015debac0d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac6e9b2cf676f2fae86678015debac0d">&#9670;&#160;</a></span>GetLudeoStateInfo()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static LudeoState LudeoSDK.LudeoManager.GetLudeoStateInfo </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Get Ludeo relevant info on the latest Ludeo state. </p>
-<dl class="section return"><dt>Returns</dt><dd>Data supplied by Ludeo</dd></dl>
-
-</div>
-</div>
 <a id="ae1bff352b0bc5639aca6585a508fdbad" name="ae1bff352b0bc5639aca6585a508fdbad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1bff352b0bc5639aca6585a508fdbad">&#9670;&#160;</a></span>Init()</h2>
 
@@ -890,7 +266,21 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> launcherUserID, LudeoLauncher launcher, <span class="keywordtype">string</span> apiKey, CallbackWithLudeoLudeoFlowState ludeoHandler)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (isConfigRun)</div>
+<div class="line">    {</div>
+<div class="line">    <span class="keywordflow">if</span> (ludeoModeType == LudeoModeType.Player)</div>
+<div class="line">        {</div>
+<div class="line">       Logger.Error(<span class="stringliteral">&quot;No config mode for &quot;</span> + ludeoModeType);</div>
+<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Error_General;</div>
+<div class="line">        }</div>
+<div class="line">    Logger.Warning(<span class="stringliteral">&quot;Running in CONFIG mode!&quot;</span>);</div>
+<div class="line">    <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoHelpers</a>.DisplayConfigWarningMessage();</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_helpers_html"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoSDK.LudeoHelpers</a></div><div class="ttdoc">Helpers method for Ludeo integration.</div><div class="ttdef"><b>Definition:</b> LudeoHelpers.cs:9</div></div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a8b7e258abf712f6c7ab7cd848d4d6676" name="a8b7e258abf712f6c7ab7cd848d4d6676"></a>
@@ -918,7 +308,18 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Fetch and load any Gameplay data needed for the Gameplay. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if call is successful</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">       Instance.SwitchToUserType(LudeoGameplayType.InGame);</div>
+<div class="line">       m_systemData.UpdateFlowState(LudeoFlowState.WaitingForSetGameplayDefinitions, isNotifyGame: <span class="keyword">true</span>);</div>
+<div class="line"> </div>
+<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ae10197596a2b7ad905cde67258705f93" name="ae10197596a2b7ad905cde67258705f93"></a>
@@ -953,11 +354,23 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if switch successful</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(Guid ludeoId)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">       Instance.SwitchToUserType(LudeoGameplayType.InLudeo);</div>
+<div class="line">       <span class="comment">// TODO: consider whether we can avoid re-downloading the same downloaded Ludeo (possible!)</span></div>
+<div class="line">       Instance.m_ludeoLoader.DownloadLudeo(ludeoId, Instance.HandleLudeoDownloadReceived, Instance.HandleLudeoDownloadFailed);</div>
+<div class="line">       <span class="comment">//Instance.NotifyIfModeReady();</span></div>
+<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="acb2041c4432fbe187f45cf583cf0c1d1" name="acb2041c4432fbe187f45cf583cf0c1d1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acb2041c4432fbe187f45cf583cf0c1d1">&#9670;&#160;</a></span>MarkHighlight()</h2>
+<a id="a5a2711f465756515c5f736ae4b518eae" name="a5a2711f465756515c5f736ae4b518eae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5a2711f465756515c5f736ae4b518eae">&#9670;&#160;</a></span>BeginGameplay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -966,7 +379,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.MarkHighlight </td>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.BeginGameplay </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -979,13 +392,22 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mark the latest data as a highlight. </p>
-<dl class="section return"><dt>Returns</dt><dd>Whether marking the highlight was successful</dd></dl>
-
+<p>Begin a session according to the current LudeoModeType you've set. </p>
+<dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if begin gameplay is successful or LudeoMessage.Error_Need_Init_First if begin gameplay is error</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">       ActionBuilders.RequestBeginGameplay(m_systemData);</div>
+<div class="line">       <span class="keywordflow">return</span> m_flowActions.handleBeginSession();</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="affeff8ddacf15fa90a9d2bcc10c62131" name="affeff8ddacf15fa90a9d2bcc10c62131"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#affeff8ddacf15fa90a9d2bcc10c62131">&#9670;&#160;</a></span>PauseGameplay()</h2>
+<a id="aa01f6fceadc8ea2ea214c3ecbc5c8ba7" name="aa01f6fceadc8ea2ea214c3ecbc5c8ba7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">&#9670;&#160;</a></span>EndGameplay()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -994,7 +416,7 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.PauseGameplay </td>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.EndGameplay </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -1007,9 +429,49 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pause the session you've already started. </p>
-<dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if pause gameplay is successful</dd></dl>
+<p>End the current session if running. </p>
+<dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if end gameplay is successful</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    ActionBuilders.RequestEndGameplay(m_systemData, EndReason.GameplayDone);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> m_flowActions.handleEndSession();</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a9e4096b49c368381611a51d5ac6764d9" name="a9e4096b49c368381611a51d5ac6764d9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9e4096b49c368381611a51d5ac6764d9">&#9670;&#160;</a></span>AbortGameplay()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void LudeoSDK.LudeoManager.AbortGameplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Abort the current Gameplay. All Ludeo data will be lost. </p>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    ActionBuilders.RequestEndGameplay(m_systemData, EndReason.GameplayAborted);</div>
+<div class="line">    Instance.m_screenManager.HideAll();</div>
+<div class="line">    m_flowActions.handleEndSession();</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a2938bc9aca68385a19d8bfc448116394" name="a2938bc9aca68385a19d8bfc448116394"></a>
@@ -1037,11 +499,22 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Tell Ludeo you are ready to begin the Gameplay and display any <a class="el" href="namespace_ludeo_s_d_k.html">LudeoSDK</a> UI if relevant. </p>
 <dl class="section return"><dt>Returns</dt><dd>Will return Warning_Ludeo_Not_Downloaded if download was not yet complete or other</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">       GameplayDefinitions gameplayDefinitions = GameplayDefinitions.Zero;</div>
+<div class="line">       Tracker.GetGameplayDefinitions(ref gameplayDefinitions);</div>
+<div class="line">       ActionBuilders.RequestReadyForGameplay(m_systemData, gameplayDefinitions);</div>
+<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="a99ea9ed813bdbc4c75823568b30a6267" name="a99ea9ed813bdbc4c75823568b30a6267"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a99ea9ed813bdbc4c75823568b30a6267">&#9670;&#160;</a></span>RegisterHandler()</h2>
+<a id="acb2041c4432fbe187f45cf583cf0c1d1" name="acb2041c4432fbe187f45cf583cf0c1d1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acb2041c4432fbe187f45cf583cf0c1d1">&#9670;&#160;</a></span>MarkHighlight()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1050,10 +523,9 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.RegisterHandler </td>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.MarkHighlight </td>
           <td>(</td>
-          <td class="paramtype">CallbackWithLudeoLudeoFlowState&#160;</td>
-          <td class="paramname"><em>ludeoHandler</em></td><td>)</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -1064,16 +536,26 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Register handler to be notifed in any changes in Ludeo session. If you clear the handler from memory - use this to register again. <br  />
- </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">ludeoHandler</td><td>The list of handlers to call on Ludeo events.</td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<p>Mark the latest data as a highlight. </p>
+<dl class="section return"><dt>Returns</dt><dd>Whether marking the highlight was successful</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    LudeoFlowState state = m_systemData.ludeoState.flowState;</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">       <span class="keywordflow">if</span> (state == LudeoFlowState.GameplayOn)</div>
+<div class="line">       {</div>
+<div class="line">            HighlightManager.Instance.HighlightLudeo();</div>
+<div class="line">            ActionBuilders.RequestMarkHighlight(m_systemData);</div>
+<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">       }</div>
+<div class="line">       <span class="keywordflow">else</span></div>
+<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Tracking_Only_During_Gameplay;</div>
+<div class="line">       <span class="comment">//return Tracker.MarkHighlight();</span></div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="ac7317ec43b02a502e5afa1fc885dc63f" name="ac7317ec43b02a502e5afa1fc885dc63f"></a>
@@ -1101,7 +583,57 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Continue the session you've already started and paused. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if resume gameplay is successful</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    {</div>
+<div class="line">        LudeoFlowState state = m_systemData.ludeoState.flowState;</div>
+<div class="line">        <span class="keywordflow">if</span> (IsInitDone() &amp;&amp; state == LudeoFlowState.GameplayPaused)</div>
+<div class="line">        {</div>
+<div class="line">            ActionBuilders.RequestResumeGameplay(m_systemData);</div>
+<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">        }</div>
+<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    }</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="affeff8ddacf15fa90a9d2bcc10c62131" name="affeff8ddacf15fa90a9d2bcc10c62131"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#affeff8ddacf15fa90a9d2bcc10c62131">&#9670;&#160;</a></span>PauseGameplay()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.PauseGameplay </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Pause the session you've already started. </p>
+<dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if pause gameplay is successful</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    LudeoFlowState state = m_systemData.ludeoState.flowState;</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone() &amp;&amp; state == LudeoFlowState.GameplayOn)</div>
+<div class="line">    {</div>
+<div class="line">         ActionBuilders.RequestPauseGameplay(m_systemData);</div>
+<div class="line">         <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a3d90b89bfcd056e485183495d8cd7697" name="a3d90b89bfcd056e485183495d8cd7697"></a>
@@ -1136,11 +668,22 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(GameplayDefinitions gameplayDefinitions)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">         <span class="keywordflow">if</span> (Tracker.IsReadyToSetDefinitions())</div>
+<div class="line">            <span class="keywordflow">return</span> Tracker.SetDefinitions(gameplayDefinitions);</div>
+<div class="line">         <span class="keywordflow">else</span></div>
+<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Action_Not_During_Value_State;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="a9d14fe8a0730a51649250f214e8976c8" name="a9d14fe8a0730a51649250f214e8976c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d14fe8a0730a51649250f214e8976c8">&#9670;&#160;</a></span>SetGameplayState() <span class="overload">[1/4]</span></h2>
+<a id="ad5cc5613e9b9a6769a305eda6535388e" name="ad5cc5613e9b9a6769a305eda6535388e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad5cc5613e9b9a6769a305eda6535388e">&#9670;&#160;</a></span>SetGameplayState() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1157,7 +700,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">bool&#160;</td>
+          <td class="paramtype">int&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -1173,16 +716,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set a booleans value state. </p>
+<p>Set an int value state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique key</td></tr>
-    <tr><td class="paramname">value</td><td>bool value</td></tr>
+    <tr><td class="paramname">value</td><td>int value</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, <span class="keywordtype">int</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a8de3e28bf1413e5b34155e2a1c2257ea" name="a8de3e28bf1413e5b34155e2a1c2257ea"></a>
@@ -1228,11 +775,15 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, <span class="keywordtype">float</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
-<a id="ad5cc5613e9b9a6769a305eda6535388e" name="ad5cc5613e9b9a6769a305eda6535388e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad5cc5613e9b9a6769a305eda6535388e">&#9670;&#160;</a></span>SetGameplayState() <span class="overload">[3/4]</span></h2>
+<a id="a9d14fe8a0730a51649250f214e8976c8" name="a9d14fe8a0730a51649250f214e8976c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d14fe8a0730a51649250f214e8976c8">&#9670;&#160;</a></span>SetGameplayState() <span class="overload">[3/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1249,7 +800,7 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">bool&#160;</td>
           <td class="paramname"><em>value</em>&#160;</td>
         </tr>
         <tr>
@@ -1265,16 +816,20 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set an int value state. </p>
+<p>Set a booleans value state. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique key</td></tr>
-    <tr><td class="paramname">value</td><td>int value</td></tr>
+    <tr><td class="paramname">value</td><td>bool value</td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, <span class="keywordtype">bool</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 <a id="a76173d72f07e4b077cea3b39c01b745c" name="a76173d72f07e4b077cea3b39c01b745c"></a>
@@ -1320,7 +875,649 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, Vec3 value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a732fafb70e96054616a7f2dcf4bd331d" name="a732fafb70e96054616a7f2dcf4bd331d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a732fafb70e96054616a7f2dcf4bd331d">&#9670;&#160;</a></span>GetGameplayDefinitionsKeys()</h2>
 
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinitionsKeys </td>
+          <td>(</td>
+          <td class="paramtype">LudeoParam&#160;</td>
+          <td class="paramname"><em>paramType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string[]&#160;</td>
+          <td class="paramname"><em>keys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the array of definitions' keys of certain param type of the Ludeo highlight to replay. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramType</td><td>The type of parameter</td></tr>
+    <tr><td class="paramname">keys</td><td>The array of keys found</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Error_Need_Init_First</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(LudeoParam paramType, out <span class="keywordtype">string</span>[] keys)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinitionKeys(paramType, out keys);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a93d9d128fac49eae30bd84cd576ef493" name="a93d9d128fac49eae30bd84cd576ef493"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d9d128fac49eae30bd84cd576ef493">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[1/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a definition saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
+    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">int</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a36af8181eff8231e76f73a37f4c0181e" name="a36af8181eff8231e76f73a37f4c0181e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36af8181eff8231e76f73a37f4c0181e">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[2/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a definition saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
+    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">float</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a6bd3f0d1536748032481759839a27e04" name="a6bd3f0d1536748032481759839a27e04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6bd3f0d1536748032481759839a27e04">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[3/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a definition saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
+    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">bool</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a4344f2d4bb88b4788242420470ad3ed0" name="a4344f2d4bb88b4788242420470ad3ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4344f2d4bb88b4788242420470ad3ed0">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[4/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out Vec3&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a definition saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
+    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out Vec3 value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aa99ab9243dec614bcb2d5e12a33a1b81" name="aa99ab9243dec614bcb2d5e12a33a1b81"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa99ab9243dec614bcb2d5e12a33a1b81">&#9670;&#160;</a></span>GetGameplayDefinition() <span class="overload">[5/5]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayDefinition </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get a definition saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
+    <tr><td class="paramname">value</td><td>Value of definition</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">string</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ad21c8c94907caeb05716f8ee57b48348" name="ad21c8c94907caeb05716f8ee57b48348"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad21c8c94907caeb05716f8ee57b48348">&#9670;&#160;</a></span>GetGameplayStateKeys()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayStateKeys </td>
+          <td>(</td>
+          <td class="paramtype">LudeoParam&#160;</td>
+          <td class="paramname"><em>paramType</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out string[]&#160;</td>
+          <td class="paramname"><em>keys</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the array of variables' keys of certain param type of the Ludeo. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">paramType</td><td>The type of parameter</td></tr>
+    <tr><td class="paramname">keys</td><td>The array of keys found</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Error_Need_Init_First</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(LudeoParam paramType, out <span class="keywordtype">string</span>[] keys)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValueKeys(paramType, out keys);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a528c643615bc4ffc84c7a528f32b5e57" name="a528c643615bc4ffc84c7a528f32b5e57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a528c643615bc4ffc84c7a528f32b5e57">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[1/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out int&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a field saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
+    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">int</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aa736d805259ee585643d629b8cdbb99c" name="aa736d805259ee585643d629b8cdbb99c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa736d805259ee585643d629b8cdbb99c">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out float&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a field saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
+    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">float</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="ac2d0e937c15c0e181354e13dcd1cf3df" name="ac2d0e937c15c0e181354e13dcd1cf3df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2d0e937c15c0e181354e13dcd1cf3df">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out bool&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a field saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
+    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">bool</span> value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a1ea273eba9c75f49c1f15e2644cf6681" name="a1ea273eba9c75f49c1f15e2644cf6681"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1ea273eba9c75f49c1f15e2644cf6681">&#9670;&#160;</a></span>GetGameplayState() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.GetGameplayState </td>
+          <td>(</td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>key</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">out Vec3&#160;</td>
+          <td class="paramname"><em>value</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the value of a field saved in the highlight. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
+    <tr><td class="paramname">value</td><td>Value of variable</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out Vec3 value)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="aac6e9b2cf676f2fae86678015debac0d" name="aac6e9b2cf676f2fae86678015debac0d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac6e9b2cf676f2fae86678015debac0d">&#9670;&#160;</a></span>GetLudeoStateInfo()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoState LudeoSDK.LudeoManager.GetLudeoStateInfo </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get Ludeo relevant info on the latest Ludeo state. </p>
+<dl class="section return"><dt>Returns</dt><dd>Data supplied by Ludeo</dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">        <span class="keywordflow">return</span> m_systemData.ludeoState;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> LudeoState() { previousFlowState = LudeoFlowState.Null, flowState = LudeoFlowState.WaitingForInit, gameplayType = LudeoGameplayType.InGame, latestMessage = LudeoMessage.Error_Need_Init_First };</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
+</div>
+</div>
+<a id="a99ea9ed813bdbc4c75823568b30a6267" name="a99ea9ed813bdbc4c75823568b30a6267"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a99ea9ed813bdbc4c75823568b30a6267">&#9670;&#160;</a></span>RegisterHandler()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static LudeoMessage LudeoSDK.LudeoManager.RegisterHandler </td>
+          <td>(</td>
+          <td class="paramtype">CallbackWithLudeoLudeoFlowState&#160;</td>
+          <td class="paramname"><em>ludeoHandler</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Register handler to be notifed in any changes in Ludeo session. If you clear the handler from memory - use this to register again. <br  />
+ </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ludeoHandler</td><td>The list of handlers to call on Ludeo events.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd></dd></dl>
+<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(CallbackWithLudeoLudeoFlowState ludeoHandler)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    {</div>
+<div class="line">         Instance.m_isHandlerRegistered = <span class="keyword">true</span>;</div>
+<div class="line"> </div>
+<div class="line">         <span class="keywordflow">if</span> (ludeoHandler == <span class="keyword">null</span>)</div>
+<div class="line">         {</div>
+<div class="line">            Logger.Error(<span class="stringliteral">&quot;You must register to ludeoHandler in order to integrate with Ludeo SDK.&quot;</span>);</div>
+<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Must_Register_To_Event;</div>
+<div class="line">         }</div>
+<div class="line">         m_systemData.ludeoSessionHandler = ludeoHandler;</div>
+<div class="line"> </div>
+<div class="line">         <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">    }</div>
+<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">}</div>
+</div><!-- fragment --> 
 </div>
 </div>
 </div><!-- contents -->

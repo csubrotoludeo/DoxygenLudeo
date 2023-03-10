@@ -25,52 +25,34 @@
 var NAVTREE =
 [
   [ "Ludeo SDK", "index.html", [
-    [ "What is Ludeo?", "index.html", "index" ],
-    [ "How It Works?", "howitworks.html", [
-      [ "Why use SDK?", "howitworks.html#autotoc_md13", [
-        [ "Benefits of SDK", "howitworks.html#autotoc_md14", null ]
-      ] ],
-      [ "How Ludeo Works", "howitworks.html#autotoc_md15", [
-        [ "Step 1: Integrate your Game", "howitworks.html#autotoc_md16", null ],
-        [ "Step2: The Creator Makes a Ludeo", "howitworks.html#autotoc_md17", null ],
-        [ "Step 3: The Player Plays the Ludeo", "howitworks.html#autotoc_md18", null ]
-      ] ],
-      [ "Ludeo Architecture", "howitworks.html#autotoc_md19", [
-        [ "Tracking Your Game", "howitworks.html#autotoc_md20", null ],
-        [ "Uploading Gameplay Media", "howitworks.html#autotoc_md21", null ],
-        [ "Game Manger", "howitworks.html#autotoc_md22", null ],
-        [ "Creator Lab", "howitworks.html#autotoc_md23", null ],
-        [ "Ludeo Manger", "howitworks.html#autotoc_md24", null ],
-        [ "Ludeo Player", "howitworks.html#autotoc_md25", null ]
-      ] ]
-    ] ],
+    [ "Introduction", "index.html", "index" ],
     [ "Adding Ludeo to Your Game", "integrartion.html", [
       [ "Dependencies", "integrartion.html#dependencies", null ],
       [ "Setup and Install", "integrartion.html#installation", [
-        [ "Prerequisites", "integrartion.html#autotoc_md30", null ],
-        [ "Integration", "integrartion.html#autotoc_md31", [
-          [ "Step 1: Set Steam Player ID", "integrartion.html#autotoc_md32", null ],
-          [ "Step 2: Set API Key", "integrartion.html#autotoc_md33", null ],
-          [ "Step 3: Set Game ID", "integrartion.html#autotoc_md34", null ],
-          [ "Step 4: Build and Run the Project", "integrartion.html#autotoc_md35", null ]
+        [ "Prerequisites", "integrartion.html#autotoc_md23", null ],
+        [ "Integration", "integrartion.html#autotoc_md24", [
+          [ "Step 1: Set Steam Player ID", "integrartion.html#autotoc_md25", null ],
+          [ "Step 2: Set API Key", "integrartion.html#autotoc_md26", null ],
+          [ "Step 3: Set Game ID", "integrartion.html#autotoc_md27", null ],
+          [ "Step 4: Build and Run the Project", "integrartion.html#autotoc_md28", null ]
         ] ]
       ] ],
       [ "How to Install Sample App", "integrartion.html#installsampleapp", [
-        [ "Step 1: Download or Clone the Sample App Repo", "integrartion.html#autotoc_md36", null ],
-        [ "Step 2: Open the Project", "integrartion.html#autotoc_md37", null ],
-        [ "Step 3: Start the Sample Application", "integrartion.html#autotoc_md38", null ],
-        [ "Step 4: Play the Game", "integrartion.html#autotoc_md39", null ]
+        [ "Step 1: Download or Clone the Sample App Repo", "integrartion.html#autotoc_md29", null ],
+        [ "Step 2: Open the Project", "integrartion.html#autotoc_md30", null ],
+        [ "Step 3: Start the Sample Application", "integrartion.html#autotoc_md31", null ],
+        [ "Step 4: Play the Game", "integrartion.html#autotoc_md32", null ]
       ] ],
       [ "User Flows", "integrartion.html#section3", [
-        [ "Creator", "integrartion.html#autotoc_md40", [
-          [ "Step 1: Creator Launch the Game", "integrartion.html#autotoc_md41", null ],
-          [ "Step 2: Play the Game", "integrartion.html#autotoc_md42", null ],
-          [ "Step 3: Capture the Highlight", "integrartion.html#autotoc_md43", null ]
+        [ "Creator Flow", "integrartion.html#autotoc_md33", [
+          [ "Step 1: Creator Launch the Game", "integrartion.html#autotoc_md34", null ],
+          [ "Step 2: Play the Game", "integrartion.html#autotoc_md35", null ],
+          [ "Step 3: Capture the Highlight", "integrartion.html#autotoc_md36", null ]
         ] ],
-        [ "Player", "integrartion.html#autotoc_md44", [
-          [ "Step 1: Player Launch Ludeo", "integrartion.html#autotoc_md45", null ],
-          [ "Step 2: Player Plays Ludeo", "integrartion.html#autotoc_md46", null ],
-          [ "Step 3: Summary", "integrartion.html#autotoc_md47", null ]
+        [ "Player Flow", "integrartion.html#autotoc_md37", [
+          [ "Step 1: Player Launch Ludeo", "integrartion.html#autotoc_md38", null ],
+          [ "Step 2: Player Plays Ludeo", "integrartion.html#autotoc_md39", null ],
+          [ "Step 3: Summary", "integrartion.html#autotoc_md40", null ]
         ] ]
       ] ]
     ] ],

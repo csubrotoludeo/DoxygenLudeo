@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['init_0',['Init',['../class_ludeo_d_k_1_1_l_d_k_manager.html#a2f012a87221ed21a462e1228d9be1e81',1,'LudeoDK.LDKManager.Init()'],['../class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad',1,'LudeoSDK.LudeoManager.Init()']]]
+  ['loadgameplaydata_0',['LoadGameplayData',['../class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676',1,'LudeoSDK.LudeoManager.LoadGameplayData()'],['../class_ludeo_s_d_k_1_1_ludeo_manager.html#ae10197596a2b7ad905cde67258705f93',1,'LudeoSDK.LudeoManager.LoadGameplayData(Guid ludeoId)']]],
+  ['ludeohelpers_1',['LudeoHelpers',['../class_ludeo_s_d_k_1_1_ludeo_helpers.html',1,'LudeoSDK']]],
+  ['ludeomanager_2',['LudeoManager',['../class_ludeo_s_d_k_1_1_ludeo_manager.html',1,'LudeoSDK']]],
+  ['ludeosdk_3',['LudeoSDK',['../namespace_ludeo_s_d_k.html',1,'']]]
 ];
