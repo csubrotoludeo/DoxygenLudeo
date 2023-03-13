@@ -115,99 +115,99 @@ $(document).ready(function(){initNavTree('class_ludeo_s_d_k_1_1_ludeo_manager.ht
 </div><!--header-->
 <div class="contents">
 
-<p>Enables Ludeos in your game.  
+<p>This is the Ludeo Manager Class. Ludeo Manager includes all of the necessary methods for enabling Ludeo features that have been integrated into your game.  
  <a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:ae1bff352b0bc5639aca6585a508fdbad"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init</a> (string launcherUserID, LudeoLauncher launcher, string apiKey, CallbackWithLudeoLudeoFlowState ludeoHandler)</td></tr>
-<tr class="memdesc:ae1bff352b0bc5639aca6585a508fdbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call this once at runtime in order to enable LDK in your project.  <br /></td></tr>
+<tr class="memdesc:ae1bff352b0bc5639aca6585a508fdbad"><td class="mdescLeft">&#160;</td><td class="mdescRight">An initialization method for Ludeo. Invoke this method during runtime to enable LDK in your project.  <br /></td></tr>
 <tr class="separator:ae1bff352b0bc5639aca6585a508fdbad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b7e258abf712f6c7ab7cd848d4d6676"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LoadGameplayData</a> ()</td></tr>
-<tr class="memdesc:a8b7e258abf712f6c7ab7cd848d4d6676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch and load any Gameplay data needed for the Gameplay.  <br /></td></tr>
+<tr class="memdesc:a8b7e258abf712f6c7ab7cd848d4d6676"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that retrieves and loads any required Gameplay data. This method is used when a player wants to replay the gameplay of a creator.  <br /></td></tr>
 <tr class="separator:a8b7e258abf712f6c7ab7cd848d4d6676"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae10197596a2b7ad905cde67258705f93"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae10197596a2b7ad905cde67258705f93">LoadGameplayData</a> (Guid ludeoId)</td></tr>
-<tr class="memdesc:ae10197596a2b7ad905cde67258705f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch and load any Gameplay data needed for replaying a Ludeo Ludeo data will be downloaded at this stage.  <br /></td></tr>
+<tr class="memdesc:ae10197596a2b7ad905cde67258705f93"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that retrieves and loads any required Gameplay data. The data required to replay the gameplay will be downloaded by calling this method.  <br /></td></tr>
 <tr class="separator:ae10197596a2b7ad905cde67258705f93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5a2711f465756515c5f736ae4b518eae"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay</a> ()</td></tr>
-<tr class="memdesc:a5a2711f465756515c5f736ae4b518eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin a session according to the current LudeoModeType you've set.  <br /></td></tr>
+<tr class="memdesc:a5a2711f465756515c5f736ae4b518eae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that initiates a session based on the current LudeoModeType. This method is used to initiate gameplay by a creator or player.  <br /></td></tr>
 <tr class="separator:a5a2711f465756515c5f736ae4b518eae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa01f6fceadc8ea2ea214c3ecbc5c8ba7"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">EndGameplay</a> ()</td></tr>
-<tr class="memdesc:aa01f6fceadc8ea2ea214c3ecbc5c8ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">End the current session if running.  <br /></td></tr>
+<tr class="memdesc:aa01f6fceadc8ea2ea214c3ecbc5c8ba7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that terminates the current session. This method terminates the present session of Ludeo if one is currently active.  <br /></td></tr>
 <tr class="separator:aa01f6fceadc8ea2ea214c3ecbc5c8ba7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9e4096b49c368381611a51d5ac6764d9"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a9e4096b49c368381611a51d5ac6764d9">AbortGameplay</a> ()</td></tr>
-<tr class="memdesc:a9e4096b49c368381611a51d5ac6764d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Abort the current Gameplay. All Ludeo data will be lost.  <br /></td></tr>
+<tr class="memdesc:a9e4096b49c368381611a51d5ac6764d9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that aborts the current Gameplay. All the current Ludeo gameplay data will be lost.  <br /></td></tr>
 <tr class="separator:a9e4096b49c368381611a51d5ac6764d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2938bc9aca68385a19d8bfc448116394"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay</a> ()</td></tr>
-<tr class="memdesc:a2938bc9aca68385a19d8bfc448116394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Tell Ludeo you are ready to begin the Gameplay and display any <a class="el" href="namespace_ludeo_s_d_k.html">LudeoSDK</a> UI if relevant.  <br /></td></tr>
+<tr class="memdesc:a2938bc9aca68385a19d8bfc448116394"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that tells Ludeo that you are ready. This method will initialize the gameplay and display the Ludeo SDK UI.  <br /></td></tr>
 <tr class="separator:a2938bc9aca68385a19d8bfc448116394"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb2041c4432fbe187f45cf583cf0c1d1"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">MarkHighlight</a> ()</td></tr>
-<tr class="memdesc:acb2041c4432fbe187f45cf583cf0c1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mark the latest data as a highlight.  <br /></td></tr>
+<tr class="memdesc:acb2041c4432fbe187f45cf583cf0c1d1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that marks the latest data as a highlight. This method designates the most recent gameplay data stored by the creator as the highlight.  <br /></td></tr>
 <tr class="separator:acb2041c4432fbe187f45cf583cf0c1d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7317ec43b02a502e5afa1fc885dc63f"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ac7317ec43b02a502e5afa1fc885dc63f">ResumeGameplay</a> ()</td></tr>
-<tr class="memdesc:ac7317ec43b02a502e5afa1fc885dc63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continue the session you've already started and paused.  <br /></td></tr>
+<tr class="memdesc:ac7317ec43b02a502e5afa1fc885dc63f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that continues the session you have paused. This method will resume any previously initialized and paused gameplay data.  <br /></td></tr>
 <tr class="separator:ac7317ec43b02a502e5afa1fc885dc63f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:affeff8ddacf15fa90a9d2bcc10c62131"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#affeff8ddacf15fa90a9d2bcc10c62131">PauseGameplay</a> ()</td></tr>
-<tr class="memdesc:affeff8ddacf15fa90a9d2bcc10c62131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Pause the session you've already started.  <br /></td></tr>
+<tr class="memdesc:affeff8ddacf15fa90a9d2bcc10c62131"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that pauses the session you've already started. This method enables you to pause a Ludeo gameplay or session.  <br /></td></tr>
 <tr class="separator:affeff8ddacf15fa90a9d2bcc10c62131"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3d90b89bfcd056e485183495d8cd7697"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions</a> (GameplayDefinitions gameplayDefinitions)</td></tr>
-<tr class="memdesc:a3d90b89bfcd056e485183495d8cd7697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the Gameplay definitions for the Gameplay you are about to run. Definitions are constant throughout the same Gameplay.  <br /></td></tr>
+<tr class="memdesc:a3d90b89bfcd056e485183495d8cd7697"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that sets the Gameplay definitions for the Gameplay you are about to run. The definitions are constant throughout the same Gameplay.  <br /></td></tr>
 <tr class="separator:a3d90b89bfcd056e485183495d8cd7697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5cc5613e9b9a6769a305eda6535388e"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad5cc5613e9b9a6769a305eda6535388e">SetGameplayState</a> (string key, int value)</td></tr>
-<tr class="memdesc:ad5cc5613e9b9a6769a305eda6535388e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set an int value state.  <br /></td></tr>
+<tr class="memdesc:ad5cc5613e9b9a6769a305eda6535388e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that sets an int value state. This method will set an integer value state for the gameplay definitions.  <br /></td></tr>
 <tr class="separator:ad5cc5613e9b9a6769a305eda6535388e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8de3e28bf1413e5b34155e2a1c2257ea"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a8de3e28bf1413e5b34155e2a1c2257ea">SetGameplayState</a> (string key, float value)</td></tr>
-<tr class="memdesc:a8de3e28bf1413e5b34155e2a1c2257ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a float value state.  <br /></td></tr>
+<tr class="memdesc:a8de3e28bf1413e5b34155e2a1c2257ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that sets an float value state. This method will set an float value state for the gameplay definitions.  <br /></td></tr>
 <tr class="separator:a8de3e28bf1413e5b34155e2a1c2257ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d14fe8a0730a51649250f214e8976c8"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a9d14fe8a0730a51649250f214e8976c8">SetGameplayState</a> (string key, bool value)</td></tr>
-<tr class="memdesc:a9d14fe8a0730a51649250f214e8976c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a booleans value state.  <br /></td></tr>
+<tr class="memdesc:a9d14fe8a0730a51649250f214e8976c8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that sets an bool value state. This method will set an boolean value state for the gameplay definitionse.  <br /></td></tr>
 <tr class="separator:a9d14fe8a0730a51649250f214e8976c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a76173d72f07e4b077cea3b39c01b745c"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a76173d72f07e4b077cea3b39c01b745c">SetGameplayState</a> (string key, Vec3 value)</td></tr>
-<tr class="memdesc:a76173d72f07e4b077cea3b39c01b745c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set a Vec3 value state.  <br /></td></tr>
+<tr class="memdesc:a76173d72f07e4b077cea3b39c01b745c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that sets an Vec3 value state. This method will set an Vec3 value state for the gameplay definitions.  <br /></td></tr>
 <tr class="separator:a76173d72f07e4b077cea3b39c01b745c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a732fafb70e96054616a7f2dcf4bd331d"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitionsKeys</a> (LudeoParam paramType, out string[] keys)</td></tr>
-<tr class="memdesc:a732fafb70e96054616a7f2dcf4bd331d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the array of definitions' keys of certain param type of the Ludeo highlight to replay.  <br /></td></tr>
+<tr class="memdesc:a732fafb70e96054616a7f2dcf4bd331d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that gets the array of definitions' keys. This method retrieves the array of definition keys of a specific parameter type for the Ludeo highlight to replay.  <br /></td></tr>
 <tr class="separator:a732fafb70e96054616a7f2dcf4bd331d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93d9d128fac49eae30bd84cd576ef493"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a93d9d128fac49eae30bd84cd576ef493">GetGameplayDefinition</a> (string key, out int value)</td></tr>
-<tr class="memdesc:a93d9d128fac49eae30bd84cd576ef493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a definition saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:a93d9d128fac49eae30bd84cd576ef493"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that saves a int definition in the highlight. This method saves integer value definitions to the Ludeo highlight.  <br /></td></tr>
 <tr class="separator:a93d9d128fac49eae30bd84cd576ef493"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a36af8181eff8231e76f73a37f4c0181e"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a36af8181eff8231e76f73a37f4c0181e">GetGameplayDefinition</a> (string key, out float value)</td></tr>
-<tr class="memdesc:a36af8181eff8231e76f73a37f4c0181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a definition saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:a36af8181eff8231e76f73a37f4c0181e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that saves a float definition in the highlight. This method saves float value definitions to the Ludeo highlight.  <br /></td></tr>
 <tr class="separator:a36af8181eff8231e76f73a37f4c0181e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6bd3f0d1536748032481759839a27e04"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a6bd3f0d1536748032481759839a27e04">GetGameplayDefinition</a> (string key, out bool value)</td></tr>
-<tr class="memdesc:a6bd3f0d1536748032481759839a27e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a definition saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:a6bd3f0d1536748032481759839a27e04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that saves a bool definition in the highlight. This method saves boolean value definitions to the Ludeo highlight.  <br /></td></tr>
 <tr class="separator:a6bd3f0d1536748032481759839a27e04"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4344f2d4bb88b4788242420470ad3ed0"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a4344f2d4bb88b4788242420470ad3ed0">GetGameplayDefinition</a> (string key, out Vec3 value)</td></tr>
-<tr class="memdesc:a4344f2d4bb88b4788242420470ad3ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a definition saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:a4344f2d4bb88b4788242420470ad3ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that saves a Vec3 definition in the highlight. This method saves Vec3 value definitions to the Ludeo highlight.  <br /></td></tr>
 <tr class="separator:a4344f2d4bb88b4788242420470ad3ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa99ab9243dec614bcb2d5e12a33a1b81"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa99ab9243dec614bcb2d5e12a33a1b81">GetGameplayDefinition</a> (string key, out string value)</td></tr>
-<tr class="memdesc:aa99ab9243dec614bcb2d5e12a33a1b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get a definition saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:aa99ab9243dec614bcb2d5e12a33a1b81"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that saves a string definition in the highlight. This method saves string value definitions to the Ludeo highlight.  <br /></td></tr>
 <tr class="separator:aa99ab9243dec614bcb2d5e12a33a1b81"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad21c8c94907caeb05716f8ee57b48348"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad21c8c94907caeb05716f8ee57b48348">GetGameplayStateKeys</a> (LudeoParam paramType, out string[] keys)</td></tr>
-<tr class="memdesc:ad21c8c94907caeb05716f8ee57b48348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the array of variables' keys of certain param type of the Ludeo.  <br /></td></tr>
+<tr class="memdesc:ad21c8c94907caeb05716f8ee57b48348"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that gets the array of variables' keys. This method retrieves the variables' key of certain param type of the Ludeo.  <br /></td></tr>
 <tr class="separator:ad21c8c94907caeb05716f8ee57b48348"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a528c643615bc4ffc84c7a528f32b5e57"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a528c643615bc4ffc84c7a528f32b5e57">GetGameplayState</a> (string key, out int value)</td></tr>
-<tr class="memdesc:a528c643615bc4ffc84c7a528f32b5e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a field saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:a528c643615bc4ffc84c7a528f32b5e57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that gets the int value saved in the highlight. This method retrieves the integer value saved in the highlight.  <br /></td></tr>
 <tr class="separator:a528c643615bc4ffc84c7a528f32b5e57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa736d805259ee585643d629b8cdbb99c"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa736d805259ee585643d629b8cdbb99c">GetGameplayState</a> (string key, out float value)</td></tr>
-<tr class="memdesc:aa736d805259ee585643d629b8cdbb99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a field saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:aa736d805259ee585643d629b8cdbb99c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that gets the float value saved in the highlight. This method retrieves the float value saved in the highlight.  <br /></td></tr>
 <tr class="separator:aa736d805259ee585643d629b8cdbb99c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac2d0e937c15c0e181354e13dcd1cf3df"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ac2d0e937c15c0e181354e13dcd1cf3df">GetGameplayState</a> (string key, out bool value)</td></tr>
-<tr class="memdesc:ac2d0e937c15c0e181354e13dcd1cf3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a field saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:ac2d0e937c15c0e181354e13dcd1cf3df"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that gets the bool value saved in the highlight. This method retrieves the boolean value saved in the highlight.  <br /></td></tr>
 <tr class="separator:ac2d0e937c15c0e181354e13dcd1cf3df"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ea273eba9c75f49c1f15e2644cf6681"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a1ea273eba9c75f49c1f15e2644cf6681">GetGameplayState</a> (string key, out Vec3 value)</td></tr>
-<tr class="memdesc:a1ea273eba9c75f49c1f15e2644cf6681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the value of a field saved in the highlight.  <br /></td></tr>
+<tr class="memdesc:a1ea273eba9c75f49c1f15e2644cf6681"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that gets the Vec3 value saved in the highlight. This method retrieves the Vec3 value saved in the highlight.  <br /></td></tr>
 <tr class="separator:a1ea273eba9c75f49c1f15e2644cf6681"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac6e9b2cf676f2fae86678015debac0d"><td class="memItemLeft" align="right" valign="top">static LudeoState&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aac6e9b2cf676f2fae86678015debac0d">GetLudeoStateInfo</a> ()</td></tr>
-<tr class="memdesc:aac6e9b2cf676f2fae86678015debac0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get Ludeo relevant info on the latest Ludeo state.  <br /></td></tr>
+<tr class="memdesc:aac6e9b2cf676f2fae86678015debac0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method that retrieves Ludeo state information. This method retrieves only the relevant information of the current Ludeo state.  <br /></td></tr>
 <tr class="separator:aac6e9b2cf676f2fae86678015debac0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a99ea9ed813bdbc4c75823568b30a6267"><td class="memItemLeft" align="right" valign="top">static LudeoMessage&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a99ea9ed813bdbc4c75823568b30a6267">RegisterHandler</a> (CallbackWithLudeoLudeoFlowState ludeoHandler)</td></tr>
-<tr class="memdesc:a99ea9ed813bdbc4c75823568b30a6267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Register handler to be notifed in any changes in Ludeo session. If you clear the handler from memory - use this to register again. <br  />
+<tr class="memdesc:a99ea9ed813bdbc4c75823568b30a6267"><td class="mdescLeft">&#160;</td><td class="mdescRight">Method to registers Ludeo handler. The registered handler is used to inform you of any session changes in Ludeo. If you clear the handler from memory - use this to register again. <br  />
   <br /></td></tr>
 <tr class="separator:a99ea9ed813bdbc4c75823568b30a6267"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Enables Ludeos in your game. </p>
+<div class="textblock"><p>This is the Ludeo Manager Class. Ludeo Manager includes all of the necessary methods for enabling Ludeo features that have been integrated into your game. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae1bff352b0bc5639aca6585a508fdbad" name="ae1bff352b0bc5639aca6585a508fdbad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1bff352b0bc5639aca6585a508fdbad">&#9670;&#160;</a></span>Init()</h2>
@@ -255,7 +255,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Call this once at runtime in order to enable LDK in your project. </p>
+<p>An initialization method for Ludeo. Invoke this method during runtime to enable LDK in your project. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">launcherUserID</td><td>The user ID as received by the launcher</td></tr>
@@ -279,7 +279,7 @@ Static Public Member Functions</h2></td></tr>
 <div class="line">    <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoHelpers</a>.DisplayConfigWarningMessage();</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_helpers_html"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoSDK.LudeoHelpers</a></div><div class="ttdoc">Helpers method for Ludeo integration.</div><div class="ttdef"><b>Definition:</b> LudeoHelpers.cs:9</div></div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_helpers_html"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoSDK.LudeoHelpers</a></div><div class="ttdoc">This class is the Ludeo Helpers. Ludeo Helpers contains the support methods for integrating your game...</div><div class="ttdef"><b>Definition:</b> LudeoHelpers.cs:10</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -306,7 +306,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fetch and load any Gameplay data needed for the Gameplay. </p>
+<p>Method that retrieves and loads any required Gameplay data. This method is used when a player wants to replay the gameplay of a creator. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if call is successful</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -346,7 +346,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Fetch and load any Gameplay data needed for replaying a Ludeo Ludeo data will be downloaded at this stage. </p>
+<p>Method that retrieves and loads any required Gameplay data. The data required to replay the gameplay will be downloaded by calling this method. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">ludeoId</td><td>The Ludeo Id as given from the Ludeo platform (as parsed from your Execution command line argument)</td></tr>
@@ -392,7 +392,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Begin a session according to the current LudeoModeType you've set. </p>
+<p>Method that initiates a session based on the current LudeoModeType. This method is used to initiate gameplay by a creator or player. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if begin gameplay is successful or LudeoMessage.Error_Need_Init_First if begin gameplay is error</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -429,7 +429,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>End the current session if running. </p>
+<p>Method that terminates the current session. This method terminates the present session of Ludeo if one is currently active. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if end gameplay is successful</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -463,7 +463,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Abort the current Gameplay. All Ludeo data will be lost. </p>
+<p>Method that aborts the current Gameplay. All the current Ludeo gameplay data will be lost. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -497,7 +497,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Tell Ludeo you are ready to begin the Gameplay and display any <a class="el" href="namespace_ludeo_s_d_k.html">LudeoSDK</a> UI if relevant. </p>
+<p>Method that tells Ludeo that you are ready. This method will initialize the gameplay and display the Ludeo SDK UI. </p>
 <dl class="section return"><dt>Returns</dt><dd>Will return Warning_Ludeo_Not_Downloaded if download was not yet complete or other</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -536,7 +536,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Mark the latest data as a highlight. </p>
+<p>Method that marks the latest data as a highlight. This method designates the most recent gameplay data stored by the creator as the highlight. </p>
 <dl class="section return"><dt>Returns</dt><dd>Whether marking the highlight was successful</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -581,7 +581,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Continue the session you've already started and paused. </p>
+<p>Method that continues the session you have paused. This method will resume any previously initialized and paused gameplay data. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if resume gameplay is successful</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -621,7 +621,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Pause the session you've already started. </p>
+<p>Method that pauses the session you've already started. This method enables you to pause a Ludeo gameplay or session. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if pause gameplay is successful</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -660,7 +660,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set the Gameplay definitions for the Gameplay you are about to run. Definitions are constant throughout the same Gameplay. </p>
+<p>Method that sets the Gameplay definitions for the Gameplay you are about to run. The definitions are constant throughout the same Gameplay. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">gameplayDefinitions</td><td>The collection of definitions by their types</td></tr>
@@ -716,7 +716,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set an int value state. </p>
+<p>Method that sets an int value state. This method will set an integer value state for the gameplay definitions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique key</td></tr>
@@ -766,7 +766,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set a float value state. </p>
+<p>Method that sets an float value state. This method will set an float value state for the gameplay definitions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique key</td></tr>
@@ -816,7 +816,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set a booleans value state. </p>
+<p>Method that sets an bool value state. This method will set an boolean value state for the gameplay definitionse. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique key</td></tr>
@@ -866,7 +866,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Set a Vec3 value state. </p>
+<p>Method that sets an Vec3 value state. This method will set an Vec3 value state for the gameplay definitions. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique key</td></tr>
@@ -916,7 +916,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the array of definitions' keys of certain param type of the Ludeo highlight to replay. </p>
+<p>Method that gets the array of definitions' keys. This method retrieves the array of definition keys of a specific parameter type for the Ludeo highlight to replay. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">paramType</td><td>The type of parameter</td></tr>
@@ -966,7 +966,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a definition saved in the highlight. </p>
+<p>Method that saves a int definition in the highlight. This method saves integer value definitions to the Ludeo highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
@@ -1016,7 +1016,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a definition saved in the highlight. </p>
+<p>Method that saves a float definition in the highlight. This method saves float value definitions to the Ludeo highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
@@ -1066,7 +1066,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a definition saved in the highlight. </p>
+<p>Method that saves a bool definition in the highlight. This method saves boolean value definitions to the Ludeo highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
@@ -1116,7 +1116,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a definition saved in the highlight. </p>
+<p>Method that saves a Vec3 definition in the highlight. This method saves Vec3 value definitions to the Ludeo highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
@@ -1166,7 +1166,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get a definition saved in the highlight. </p>
+<p>Method that saves a string definition in the highlight. This method saves string value definitions to the Ludeo highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of definition</td></tr>
@@ -1216,7 +1216,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the array of variables' keys of certain param type of the Ludeo. </p>
+<p>Method that gets the array of variables' keys. This method retrieves the variables' key of certain param type of the Ludeo. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">paramType</td><td>The type of parameter</td></tr>
@@ -1266,7 +1266,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the value of a field saved in the highlight. </p>
+<p>Method that gets the int value saved in the highlight. This method retrieves the integer value saved in the highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
@@ -1316,7 +1316,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the value of a field saved in the highlight. </p>
+<p>Method that gets the float value saved in the highlight. This method retrieves the float value saved in the highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
@@ -1366,7 +1366,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the value of a field saved in the highlight. </p>
+<p>Method that gets the bool value saved in the highlight. This method retrieves the boolean value saved in the highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
@@ -1416,7 +1416,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get the value of a field saved in the highlight. </p>
+<p>Method that gets the Vec3 value saved in the highlight. This method retrieves the Vec3 value saved in the highlight. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">key</td><td>Unique ID of the value</td></tr>
@@ -1455,7 +1455,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Get Ludeo relevant info on the latest Ludeo state. </p>
+<p>Method that retrieves Ludeo state information. This method retrieves only the relevant information of the current Ludeo state. </p>
 <dl class="section return"><dt>Returns</dt><dd>Data supplied by Ludeo</dd></dl>
 <div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
 <div class="line">{</div>
@@ -1491,7 +1491,7 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Register handler to be notifed in any changes in Ludeo session. If you clear the handler from memory - use this to register again. <br  />
+<p>Method to registers Ludeo handler. The registered handler is used to inform you of any session changes in Ludeo. If you clear the handler from memory - use this to register again. <br  />
  </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
