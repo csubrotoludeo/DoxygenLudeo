@@ -266,20 +266,90 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> launcherUserID, LudeoLauncher launcher, <span class="keywordtype">string</span> apiKey, CallbackWithLudeoLudeoFlowState ludeoHandler)</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_Init()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (isConfigRun)</div>
+<div class="line">    <span class="keywordflow">if</span> (_isInitialized) <span class="keywordflow">return</span>;</div>
+<div class="line"> </div>
+<div class="line">    var steamID = PlayerPrefs.GetString(<span class="stringliteral">&quot;UserSteamID&quot;</span>, <span class="stringliteral">&quot;&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">if</span> (!<span class="keywordtype">string</span>.IsNullOrEmpty(steamID))</div>
 <div class="line">    {</div>
-<div class="line">    <span class="keywordflow">if</span> (ludeoModeType == LudeoModeType.Player)</div>
-<div class="line">        {</div>
-<div class="line">       Logger.Error(<span class="stringliteral">&quot;No config mode for &quot;</span> + ludeoModeType);</div>
-<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Error_General;</div>
-<div class="line">        }</div>
-<div class="line">    Logger.Warning(<span class="stringliteral">&quot;Running in CONFIG mode!&quot;</span>);</div>
-<div class="line">    <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoHelpers</a>.DisplayConfigWarningMessage();</div>
+<div class="line">        LudeoMessage ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init</a>(steamID, LudeoLauncher.Steam, <span class="stringliteral">&quot;Example_Api_Key&quot;</span>, LudeoCallbacks);</div>
+<div class="line"> </div>
+<div class="line">        <span class="keywordflow">if</span> (ok == LudeoMessage.Success)</div>
+<div class="line">            _isInitialized = <span class="keyword">true</span>;</div>
+<div class="line">    }</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - Init = &quot;</span> + ok);</div>
+<div class="line">}</div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> LudeoCallbacks(LudeoFlowState ludeoFlowState)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span> (ludeoFlowState)</div>
+<div class="line">    {</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForInit:</div>
+<div class="line">            <span class="comment">// Code for WaitingForInit</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Initialization:</div>
+<div class="line">            <span class="comment">// Code for Initialization</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForLoadGameplayData:</div>
+<div class="line">            <span class="comment">// Code for Initialization</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LoadingGameplayData:</div>
+<div class="line">            <span class="comment">// Code for LoadingGameplayData</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayDataReady:</div>
+<div class="line">            <span class="comment">// Code for GameplayDataReady</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForSetGameplayDefinitions:</div>
+<div class="line">            <span class="comment">// Code for WaitingForSetGameplayDefinitions</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGetGameplayDefinitions:</div>
+<div class="line">            <span class="comment">// Code for WaitingForGetGameplayDefinitions</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForReadyForGameplay:</div>
+<div class="line">            <span class="comment">// Code for WaitingForReadyForGameplay</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ReadyingGameplay:</div>
+<div class="line">            <span class="comment">// Code for ReadyingGameplay</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGameplayBegin:</div>
+<div class="line">            <span class="comment">// Code for WaitingForGameplayBegin</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LudeoRestarted:</div>
+<div class="line">            <span class="comment">// Code for LudeoRestarted</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayOn:</div>
+<div class="line">            <span class="comment">// Code for GameplayOn</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayPaused:</div>
+<div class="line">            <span class="comment">// Code for GameplayPaused</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayEnded:</div>
+<div class="line">            <span class="comment">// Code for GameplayEnded</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayAborted:</div>
+<div class="line">            <span class="comment">// Code for GameplayAborted</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ModeOver:</div>
+<div class="line">            <span class="comment">// Code for ModeOver</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ScreenDisplayed:</div>
+<div class="line">            <span class="comment">// Code for ScreenDisplayed</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Error:</div>
+<div class="line">            <span class="comment">// Code for Error</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForUserInteraciton:</div>
+<div class="line">            <span class="comment">// Code for WaitingForUserInteraciton</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">default</span>:</div>
+<div class="line">            <span class="comment">// Default code</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
-<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_helpers_html"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_helpers.html">LudeoSDK.LudeoHelpers</a></div><div class="ttdoc">This class is the Ludeo Helpers. Ludeo Helpers contains the support methods for integrating your game...</div><div class="ttdef"><b>Definition:</b> LudeoHelpers.cs:10</div></div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoSDK.LudeoManager</a></div><div class="ttdoc">This is the Ludeo Manager Class. Ludeo Manager includes all of the necessary methods for enabling Lud...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:26</div></div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_ae1bff352b0bc5639aca6585a508fdbad"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">LudeoSDK.LudeoManager.Init</a></div><div class="ttdeci">static LudeoMessage Init(string launcherUserID, LudeoLauncher launcher, string apiKey, CallbackWithLudeoLudeoFlowState ludeoHandler)</div><div class="ttdoc">An initialization method for Ludeo. Invoke this method during runtime to enable LDK in your project.</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:235</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -308,17 +378,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that retrieves and loads any required Gameplay data. This method is used when a player wants to replay the gameplay of a creator. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if call is successful</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_LoadGameplayData()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">    {</div>
-<div class="line">       Instance.SwitchToUserType(LudeoGameplayType.InGame);</div>
-<div class="line">       m_systemData.UpdateFlowState(LudeoFlowState.WaitingForSetGameplayDefinitions, isNotifyGame: <span class="keyword">true</span>);</div>
-<div class="line"> </div>
-<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LoadGameplayData</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - LoadGameplayData = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a8b7e258abf712f6c7ab7cd848d4d6676"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LudeoSDK.LudeoManager.LoadGameplayData</a></div><div class="ttdeci">static LudeoMessage LoadGameplayData()</div><div class="ttdoc">Method that retrieves and loads any required Gameplay data. This method is used when a player wants t...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:337</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -354,17 +419,10 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if switch successful</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(Guid ludeoId)</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_LoadGameplayData(Guid ludeoId)</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">    {</div>
-<div class="line">       Instance.SwitchToUserType(LudeoGameplayType.InLudeo);</div>
-<div class="line">       <span class="comment">// TODO: consider whether we can avoid re-downloading the same downloaded Ludeo (possible!)</span></div>
-<div class="line">       Instance.m_ludeoLoader.DownloadLudeo(ludeoId, Instance.HandleLudeoDownloadReceived, Instance.HandleLudeoDownloadFailed);</div>
-<div class="line">       <span class="comment">//Instance.NotifyIfModeReady();</span></div>
-<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LoadGameplayData</a>(ludeoId);</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - LoadGameplayData = &quot;</span> + ok);</div>
 <div class="line">}</div>
 </div><!-- fragment --> 
 </div>
@@ -394,15 +452,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that initiates a session based on the current LudeoModeType. This method is used to initiate gameplay by a creator or player. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if begin gameplay is successful or LudeoMessage.Error_Need_Init_First if begin gameplay is error</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_BeginGameplay()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">    {</div>
-<div class="line">       ActionBuilders.RequestBeginGameplay(m_systemData);</div>
-<div class="line">       <span class="keywordflow">return</span> m_flowActions.handleBeginSession();</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - BeginGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a5a2711f465756515c5f736ae4b518eae"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">LudeoSDK.LudeoManager.BeginGameplay</a></div><div class="ttdeci">static LudeoMessage BeginGameplay()</div><div class="ttdoc">Method that initiates a session based on the current LudeoModeType. This method is used to initiate g...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:387</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -431,12 +486,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that terminates the current session. This method terminates the present session of Ludeo if one is currently active. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if end gameplay is successful</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_EndGameplay()</div>
 <div class="line">{</div>
-<div class="line">    ActionBuilders.RequestEndGameplay(m_systemData, EndReason.GameplayDone);</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> m_flowActions.handleEndSession();</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">EndGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - EndGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_aa01f6fceadc8ea2ea214c3ecbc5c8ba7"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">LudeoSDK.LudeoManager.EndGameplay</a></div><div class="ttdeci">static LudeoMessage EndGameplay()</div><div class="ttdoc">Method that terminates the current session. This method terminates the present session of Ludeo if on...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:407</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -465,12 +520,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that aborts the current Gameplay. All the current Ludeo gameplay data will be lost. </p>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_AbortGameplay()</div>
 <div class="line">{</div>
-<div class="line">    ActionBuilders.RequestEndGameplay(m_systemData, EndReason.GameplayAborted);</div>
-<div class="line">    Instance.m_screenManager.HideAll();</div>
-<div class="line">    m_flowActions.handleEndSession();</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a9e4096b49c368381611a51d5ac6764d9">AbortGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - AbortGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a9e4096b49c368381611a51d5ac6764d9"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a9e4096b49c368381611a51d5ac6764d9">LudeoSDK.LudeoManager.AbortGameplay</a></div><div class="ttdeci">static void AbortGameplay()</div><div class="ttdoc">Method that aborts the current Gameplay. All the current Ludeo gameplay data will be lost.</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:423</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -499,17 +554,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that tells Ludeo that you are ready. This method will initialize the gameplay and display the Ludeo SDK UI. </p>
 <dl class="section return"><dt>Returns</dt><dd>Will return Warning_Ludeo_Not_Downloaded if download was not yet complete or other</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_ReadyForGameplay()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">    {</div>
-<div class="line">       GameplayDefinitions gameplayDefinitions = GameplayDefinitions.Zero;</div>
-<div class="line">       Tracker.GetGameplayDefinitions(ref gameplayDefinitions);</div>
-<div class="line">       ActionBuilders.RequestReadyForGameplay(m_systemData, gameplayDefinitions);</div>
-<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - ReadyForGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a2938bc9aca68385a19d8bfc448116394"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">LudeoSDK.LudeoManager.ReadyForGameplay</a></div><div class="ttdeci">static LudeoMessage ReadyForGameplay()</div><div class="ttdoc">Method that tells Ludeo that you are ready. This method will initialize the gameplay and display the ...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:441</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -538,23 +588,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that marks the latest data as a highlight. This method designates the most recent gameplay data stored by the creator as the highlight. </p>
 <dl class="section return"><dt>Returns</dt><dd>Whether marking the highlight was successful</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_MarkHighlight()</div>
 <div class="line">{</div>
-<div class="line">    LudeoFlowState state = m_systemData.ludeoState.flowState;</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">    {</div>
-<div class="line">       <span class="keywordflow">if</span> (state == LudeoFlowState.GameplayOn)</div>
-<div class="line">       {</div>
-<div class="line">            HighlightManager.Instance.HighlightLudeo();</div>
-<div class="line">            ActionBuilders.RequestMarkHighlight(m_systemData);</div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">       }</div>
-<div class="line">       <span class="keywordflow">else</span></div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Tracking_Only_During_Gameplay;</div>
-<div class="line">       <span class="comment">//return Tracker.MarkHighlight();</span></div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">MarkHighlight</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - MarkHighlight = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_acb2041c4432fbe187f45cf583cf0c1d1"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">LudeoSDK.LudeoManager.MarkHighlight</a></div><div class="ttdeci">static LudeoMessage MarkHighlight()</div><div class="ttdoc">Method that marks the latest data as a highlight. This method designates the most recent gameplay dat...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:462</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -583,18 +622,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that continues the session you have paused. This method will resume any previously initialized and paused gameplay data. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if resume gameplay is successful</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_ResumeGameplay()</div>
 <div class="line">{</div>
-<div class="line">    {</div>
-<div class="line">        LudeoFlowState state = m_systemData.ludeoState.flowState;</div>
-<div class="line">        <span class="keywordflow">if</span> (IsInitDone() &amp;&amp; state == LudeoFlowState.GameplayPaused)</div>
-<div class="line">        {</div>
-<div class="line">            ActionBuilders.RequestResumeGameplay(m_systemData);</div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">        }</div>
-<div class="line">       <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
-<div class="line">    }</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ac7317ec43b02a502e5afa1fc885dc63f">ResumeGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - ResumeGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_ac7317ec43b02a502e5afa1fc885dc63f"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ac7317ec43b02a502e5afa1fc885dc63f">LudeoSDK.LudeoManager.ResumeGameplay</a></div><div class="ttdeci">static LudeoMessage ResumeGameplay()</div><div class="ttdoc">Method that continues the session you have paused. This method will resume any previously initialized...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:498</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -623,16 +656,12 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that pauses the session you've already started. This method enables you to pause a Ludeo gameplay or session. </p>
 <dl class="section return"><dt>Returns</dt><dd>LudeoMessage.Success if pause gameplay is successful</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_PauseGameplay()</div>
 <div class="line">{</div>
-<div class="line">    LudeoFlowState state = m_systemData.ludeoState.flowState;</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone() &amp;&amp; state == LudeoFlowState.GameplayOn)</div>
-<div class="line">    {</div>
-<div class="line">         ActionBuilders.RequestPauseGameplay(m_systemData);</div>
-<div class="line">         <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#affeff8ddacf15fa90a9d2bcc10c62131">PauseGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - PauseGameplay= &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_affeff8ddacf15fa90a9d2bcc10c62131"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#affeff8ddacf15fa90a9d2bcc10c62131">LudeoSDK.LudeoManager.PauseGameplay</a></div><div class="ttdeci">static LudeoMessage PauseGameplay()</div><div class="ttdoc">Method that pauses the session you've already started. This method enables you to pause a Ludeo gamep...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:520</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -668,17 +697,37 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(GameplayDefinitions gameplayDefinitions)</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_SetGameplayDefinitions()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    var gameplayDefinitions = <span class="keyword">new</span> GameplayDefinitions();</div>
+<div class="line"> </div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;PlayerClass&quot;</span>, (<span class="keywordtype">int</span>)PlayerClass.Assault);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;SceneName&quot;</span>, <span class="stringliteral">&quot;ExampleLevel&quot;</span>);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;GameMode&quot;</span>, (<span class="keywordtype">int</span>)GameMode.TDM);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;RoundStyle&quot;</span>, (<span class="keywordtype">int</span>)RoundStyle.Rounds);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;MapName&quot;</span>, <span class="stringliteral">&quot;Guanaco Desert&quot;</span>);</div>
+<div class="line"> </div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;Goal&quot;</span>, 1000);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;FriendlyFire&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;MaxPlayers&quot;</span>, 5);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordtype">int</span> i = 0;</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">foreach</span> (var playerData <span class="keywordflow">in</span> LudeoGameManager.RemotePlayersData)</div>
 <div class="line">    {</div>
-<div class="line">         <span class="keywordflow">if</span> (Tracker.IsReadyToSetDefinitions())</div>
-<div class="line">            <span class="keywordflow">return</span> Tracker.SetDefinitions(gameplayDefinitions);</div>
-<div class="line">         <span class="keywordflow">else</span></div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Action_Not_During_Value_State;</div>
+<div class="line">        var pos = playerData.V3Position;</div>
+<div class="line">        gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;RemotePlayerName_&quot;</span> + i, <span class="stringliteral">&quot;BOT_&quot;</span> + (i + 1));</div>
+<div class="line">        gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;RemotePlayerTeam_&quot;</span> + i, 2);</div>
+<div class="line">        i++;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;LocalPlayerTeam&quot;</span>, 1);</div>
+<div class="line">    gameplayDefinitions.AddDefinition(<span class="stringliteral">&quot;TotalRemotePlayers&quot;</span>, 6);</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions</a>(gameplayDefinitions);</div>
+<div class="line">    <span class="keywordflow">if</span> (ok == LudeoMessage.Success)</div>
+<div class="line">        ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay</a>();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - SetGameplayDefinitions = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a3d90b89bfcd056e485183495d8cd7697"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">LudeoSDK.LudeoManager.SetGameplayDefinitions</a></div><div class="ttdeci">static LudeoMessage SetGameplayDefinitions(GameplayDefinitions gameplayDefinitions)</div><div class="ttdoc">Method that sets the Gameplay definitions for the Gameplay you are about to run. The definitions are ...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:569</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -725,10 +774,12 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, <span class="keywordtype">int</span> value)</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_SetGameplayState()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad5cc5613e9b9a6769a305eda6535388e">SetGameplayState</a>(<span class="stringliteral">&quot;LocalPlayerHP&quot;</span>, _currentHealth);</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - SetGameplayState LocalPlayerHP = &quot;</span> + ok);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_ad5cc5613e9b9a6769a305eda6535388e"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad5cc5613e9b9a6769a305eda6535388e">LudeoSDK.LudeoManager.SetGameplayState</a></div><div class="ttdeci">static LudeoMessage SetGameplayState(string key, int value)</div><div class="ttdoc">Method that sets an int value state. This method will set an integer value state for the gameplay def...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:593</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -775,11 +826,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, <span class="keywordtype">float</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a9d14fe8a0730a51649250f214e8976c8" name="a9d14fe8a0730a51649250f214e8976c8"></a>
@@ -825,11 +872,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, <span class="keywordtype">bool</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a76173d72f07e4b077cea3b39c01b745c" name="a76173d72f07e4b077cea3b39c01b745c"></a>
@@ -875,11 +918,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Did set occure or did something went wrong</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, Vec3 value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> Tracker.SetValue(key, value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a732fafb70e96054616a7f2dcf4bd331d" name="a732fafb70e96054616a7f2dcf4bd331d"></a>
@@ -925,10 +964,33 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Error_Need_Init_First</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(LudeoParam paramType, out <span class="keywordtype">string</span>[] keys)</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_GetGameplayDefinitionsKeys()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinitionKeys(paramType, out keys);</div>
+<div class="line">    <span class="keywordtype">string</span>[] keys;</div>
+<div class="line">    <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitionsKeys</a>(LudeoParam.Int, out keys);</div>
+<div class="line"> </div>
+<div class="line">    <span class="keywordflow">foreach</span> (var k <span class="keywordflow">in</span> keys)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a93d9d128fac49eae30bd84cd576ef493">GetGameplayDefinition</a>(k, out <span class="keywordtype">int</span> v);</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Int key found: &quot;</span> + k + <span class="stringliteral">&quot; value is: &quot;</span> + v);</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitionsKeys</a>(LudeoParam.Vec3, out keys);</div>
+<div class="line">    <span class="keywordflow">foreach</span> (var k <span class="keywordflow">in</span> keys)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a93d9d128fac49eae30bd84cd576ef493">GetGameplayDefinition</a>(k, out Vec3 v);</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Vec3 key found: &quot;</span> + k + <span class="stringliteral">&quot; value is: &quot;</span> + v.ToString());</div>
+<div class="line">    }</div>
+<div class="line"> </div>
+<div class="line">    LudeoManager.GetGameplayDefinitionsKeys(LudeoParam.String, out keys);</div>
+<div class="line">    <span class="keywordflow">foreach</span> (var k <span class="keywordflow">in</span> keys)</div>
+<div class="line">    {</div>
+<div class="line">        LudeoManager.GetGameplayDefinition(k, out <span class="keywordtype">string</span> v);</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;String key found: &quot;</span> + k + <span class="stringliteral">&quot; value is: &quot;</span> + v);</div>
+<div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a732fafb70e96054616a7f2dcf4bd331d"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">LudeoSDK.LudeoManager.GetGameplayDefinitionsKeys</a></div><div class="ttdeci">static LudeoMessage GetGameplayDefinitionsKeys(LudeoParam paramType, out string[] keys)</div><div class="ttdoc">Method that gets the array of definitions' keys. This method retrieves the array of definition keys o...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:640</div></div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a93d9d128fac49eae30bd84cd576ef493"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a93d9d128fac49eae30bd84cd576ef493">LudeoSDK.LudeoManager.GetGameplayDefinition</a></div><div class="ttdeci">static LudeoMessage GetGameplayDefinition(string key, out int value)</div><div class="ttdoc">Method that saves a int definition in the highlight. This method saves integer value definitions to t...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:645</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -975,11 +1037,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">int</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a36af8181eff8231e76f73a37f4c0181e" name="a36af8181eff8231e76f73a37f4c0181e"></a>
@@ -1025,11 +1083,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">float</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a6bd3f0d1536748032481759839a27e04" name="a6bd3f0d1536748032481759839a27e04"></a>
@@ -1075,11 +1129,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">bool</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a4344f2d4bb88b4788242420470ad3ed0" name="a4344f2d4bb88b4788242420470ad3ed0"></a>
@@ -1125,10 +1175,18 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out Vec3 value)</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_GetGameplayStateKeys()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
+<div class="line">    <span class="keywordtype">string</span>[] keys;</div>
+<div class="line">    <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad21c8c94907caeb05716f8ee57b48348">GetGameplayStateKeys</a>(LudeoParam.Vec3, out keys);</div>
+<div class="line">    <span class="keywordflow">foreach</span> (var k <span class="keywordflow">in</span> keys)</div>
+<div class="line">    {</div>
+<div class="line">        <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a528c643615bc4ffc84c7a528f32b5e57">GetGameplayState</a>(k, out Vec3 v);</div>
+<div class="line">        Debug.Log(<span class="stringliteral">&quot;Vec3 Variable key found: &quot;</span> + k + <span class="stringliteral">&quot; value is: &quot;</span> + v.ToString());</div>
+<div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a528c643615bc4ffc84c7a528f32b5e57"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a528c643615bc4ffc84c7a528f32b5e57">LudeoSDK.LudeoManager.GetGameplayState</a></div><div class="ttdeci">static LudeoMessage GetGameplayState(string key, out int value)</div><div class="ttdoc">Method that gets the int value saved in the highlight. This method retrieves the integer value saved ...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:687</div></div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_ad21c8c94907caeb05716f8ee57b48348"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad21c8c94907caeb05716f8ee57b48348">LudeoSDK.LudeoManager.GetGameplayStateKeys</a></div><div class="ttdeci">static LudeoMessage GetGameplayStateKeys(LudeoParam paramType, out string[] keys)</div><div class="ttdoc">Method that gets the array of variables' keys. This method retrieves the variables' key of certain pa...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:682</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1175,11 +1233,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">string</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetDefinition(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="ad21c8c94907caeb05716f8ee57b48348" name="ad21c8c94907caeb05716f8ee57b48348"></a>
@@ -1225,11 +1279,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Error_Need_Init_First</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(LudeoParam paramType, out <span class="keywordtype">string</span>[] keys)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValueKeys(paramType, out keys);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a528c643615bc4ffc84c7a528f32b5e57" name="a528c643615bc4ffc84c7a528f32b5e57"></a>
@@ -1275,11 +1325,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">int</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="aa736d805259ee585643d629b8cdbb99c" name="aa736d805259ee585643d629b8cdbb99c"></a>
@@ -1325,11 +1371,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">float</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="ac2d0e937c15c0e181354e13dcd1cf3df" name="ac2d0e937c15c0e181354e13dcd1cf3df"></a>
@@ -1375,11 +1417,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out <span class="keywordtype">bool</span> value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="a1ea273eba9c75f49c1f15e2644cf6681" name="a1ea273eba9c75f49c1f15e2644cf6681"></a>
@@ -1425,11 +1463,7 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Returns Sucess or Warning_Value_Not_Found</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(<span class="keywordtype">string</span> key, out Vec3 value)</div>
-<div class="line">{</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoPlayer.GetValue(key, out value);</div>
-<div class="line">}</div>
-</div><!-- fragment --> 
+<div class="fragment"></div><!-- fragment --> 
 </div>
 </div>
 <a id="aac6e9b2cf676f2fae86678015debac0d" name="aac6e9b2cf676f2fae86678015debac0d"></a>
@@ -1457,13 +1491,13 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Method that retrieves Ludeo state information. This method retrieves only the relevant information of the current Ludeo state. </p>
 <dl class="section return"><dt>Returns</dt><dd>Data supplied by Ludeo</dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example()</div>
+<div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_GetLudeoStateInfo()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">        <span class="keywordflow">return</span> m_systemData.ludeoState;</div>
-<div class="line"> </div>
-<div class="line">    <span class="keywordflow">return</span> <span class="keyword">new</span> LudeoState() { previousFlowState = LudeoFlowState.Null, flowState = LudeoFlowState.WaitingForInit, gameplayType = LudeoGameplayType.InGame, latestMessage = LudeoMessage.Error_Need_Init_First };</div>
+<div class="line">     var status = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aac6e9b2cf676f2fae86678015debac0d">GetLudeoStateInfo</a>();</div>
+<div class="line">     Debug.Log(<span class="stringliteral">&quot;GameplayType is = &quot;</span> + status.gameplayType);</div>
+<div class="line">     Debug.Log(<span class="stringliteral">&quot;LudeoFlowState is &quot;</span> + status.flowState);</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_aac6e9b2cf676f2fae86678015debac0d"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aac6e9b2cf676f2fae86678015debac0d">LudeoSDK.LudeoManager.GetLudeoStateInfo</a></div><div class="ttdeci">static LudeoState GetLudeoStateInfo()</div><div class="ttdoc">Method that retrieves Ludeo state information. This method retrieves only the relevant information of...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:717</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
@@ -1500,23 +1534,79 @@ Static Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd></dd></dl>
-<div class="fragment"><div class="line"><span class="keywordtype">void</span> Example(CallbackWithLudeoLudeoFlowState ludeoHandler)</div>
+<div class="fragment"><div class="line"> <span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_RegisterHandler()</div>
 <div class="line">{</div>
-<div class="line">    <span class="keywordflow">if</span> (IsInitDone())</div>
+<div class="line">    var ok = <a class="code hl_class" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a>.<a class="code hl_function" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a99ea9ed813bdbc4c75823568b30a6267">RegisterHandler</a>(LudeoCallbacks);</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - RegisterHandler = &quot;</span> + ok);</div>
+<div class="line">} </div>
+<div class="line"> </div>
+<div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> LudeoCallbacks(LudeoFlowState ludeoFlowState)</div>
+<div class="line">{</div>
+<div class="line">    <span class="keywordflow">switch</span> (ludeoFlowState)</div>
 <div class="line">    {</div>
-<div class="line">         Instance.m_isHandlerRegistered = <span class="keyword">true</span>;</div>
-<div class="line"> </div>
-<div class="line">         <span class="keywordflow">if</span> (ludeoHandler == <span class="keyword">null</span>)</div>
-<div class="line">         {</div>
-<div class="line">            Logger.Error(<span class="stringliteral">&quot;You must register to ludeoHandler in order to integrate with Ludeo SDK.&quot;</span>);</div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Must_Register_To_Event;</div>
-<div class="line">         }</div>
-<div class="line">         m_systemData.ludeoSessionHandler = ludeoHandler;</div>
-<div class="line"> </div>
-<div class="line">         <span class="keywordflow">return</span> LudeoMessage.Success;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForInit:</div>
+<div class="line">            <span class="comment">// Code for WaitingForInit</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Initialization:</div>
+<div class="line">            <span class="comment">// Code for Initialization</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForLoadGameplayData:</div>
+<div class="line">            <span class="comment">// Code for Initialization</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LoadingGameplayData:</div>
+<div class="line">            <span class="comment">// Code for LoadingGameplayData</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayDataReady:</div>
+<div class="line">            <span class="comment">// Code for GameplayDataReady</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForSetGameplayDefinitions:</div>
+<div class="line">            <span class="comment">// Code for WaitingForSetGameplayDefinitions</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGetGameplayDefinitions:</div>
+<div class="line">            <span class="comment">// Code for WaitingForGetGameplayDefinitions</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForReadyForGameplay:</div>
+<div class="line">            <span class="comment">// Code for WaitingForReadyForGameplay</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ReadyingGameplay:</div>
+<div class="line">            <span class="comment">// Code for ReadyingGameplay</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGameplayBegin:</div>
+<div class="line">            <span class="comment">// Code for WaitingForGameplayBegin</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LudeoRestarted:</div>
+<div class="line">            <span class="comment">// Code for LudeoRestarted</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayOn:</div>
+<div class="line">            <span class="comment">// Code for GameplayOn</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayPaused:</div>
+<div class="line">            <span class="comment">// Code for GameplayPaused</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayEnded:</div>
+<div class="line">            <span class="comment">// Code for GameplayEnded</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayAborted:</div>
+<div class="line">            <span class="comment">// Code for GameplayAborted</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ModeOver:</div>
+<div class="line">            <span class="comment">// Code for ModeOver</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ScreenDisplayed:</div>
+<div class="line">            <span class="comment">// Code for ScreenDisplayed</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Error:</div>
+<div class="line">            <span class="comment">// Code for Error</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForUserInteraciton:</div>
+<div class="line">           <span class="comment">// Code for WaitingForUserInteraciton</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
+<div class="line">        <span class="keywordflow">default</span>:</div>
+<div class="line">            <span class="comment">// Default code</span></div>
+<div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">    }</div>
-<div class="line">    <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
 <div class="line">}</div>
+<div class="ttc" id="aclass_ludeo_s_d_k_1_1_ludeo_manager_html_a99ea9ed813bdbc4c75823568b30a6267"><div class="ttname"><a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a99ea9ed813bdbc4c75823568b30a6267">LudeoSDK.LudeoManager.RegisterHandler</a></div><div class="ttdeci">static LudeoMessage RegisterHandler(CallbackWithLudeoLudeoFlowState ludeoHandler)</div><div class="ttdoc">Method to registers Ludeo handler. The registered handler is used to inform you of any session change...</div><div class="ttdef"><b>Definition:</b> LudeoManager.cs:805</div></div>
 </div><!-- fragment --> 
 </div>
 </div>
