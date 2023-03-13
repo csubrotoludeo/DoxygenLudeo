@@ -343,20 +343,9 @@ Step 2: Play the Game</h3>
 <div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
 <div class="line">        }</div>
 </div><!-- fragment --><p> LudeoDk will return a message if there is an error with the session.</p><ul>
-<li>Creator set the gameplay state by using the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions</a> method below:</li>
+<li>Creator set the gameplay state by using the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ad5cc5613e9b9a6769a305eda6535388e">SetGameplayState</a> method below:</li>
 </ul>
-<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage SetGameplayDefinitions(GameplayDefinitions gameplayDefinitions)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span> (Tracker.IsReadyToSetDefinitions())</div>
-<div class="line">                    <span class="keywordflow">return</span> Tracker.SetDefinitions(gameplayDefinitions);</div>
-<div class="line">                <span class="keywordflow">else</span></div>
-<div class="line">                    <span class="keywordflow">return</span> LudeoMessage.Error_Action_Not_During_Value_State;</div>
-<div class="line">            }</div>
-<div class="line"> </div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
-<div class="line">        }</div>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage SetGameplayState(<span class="keywordtype">string</span> key, <span class="keywordtype">int</span> value) { <span class="keywordflow">return</span> Tracker.SetValue(key, value); }</div>
 </div><!-- fragment --> <h3><a class="anchor" id="autotoc_md36"></a>
 Step 3: Capture the Highlight</h3>
 <p>Once the creator is in the game, they can capture the gameplay. The saved media will be marked as a highlight by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">MarkHighlight</a> method below: </p><div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage MarkHighlight()</div>
@@ -469,34 +458,22 @@ Step 1: Player Launch Ludeo</h3>
 </div><!-- fragment --> <h3><a class="anchor" id="autotoc_md39"></a>
 Step 2: Player Plays Ludeo</h3>
 <p>Once everything has been loaded, Ludeo will be launched.</p><ul>
-<li>Player will begin a Ludeo session with the end conditions, goals, and score parameters that have been set by the creator by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay</a> method below:</li>
+<li>Player will begin a Ludeo session with the end conditions, goals, and score parameters that have been set by the creator by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay</a> method below:</li>
 </ul>
-<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage ReadyForGameplay()</div>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage BeginGameplay()</div>
 <div class="line">        {</div>
 <div class="line">            <span class="keywordflow">if</span> (IsInitDone())</div>
 <div class="line">            {</div>
-<div class="line">                GameplayDefinitions gameplayDefinitions = GameplayDefinitions.Zero;</div>
-<div class="line">                Tracker.GetGameplayDefinitions(ref gameplayDefinitions);</div>
-<div class="line">                ActionBuilders.RequestReadyForGameplay(m_systemData, gameplayDefinitions);</div>
-<div class="line">                <span class="keywordflow">return</span> LudeoMessage.Success;</div>
-<div class="line">            }</div>
-<div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
-<div class="line">        }</div>
-</div><!-- fragment --><ul>
-<li>Once the Player begins to replay the highlighted gameplay, call the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions</a> it will set the gameplay definitions for the player.</li>
-</ul>
-<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage SetGameplayDefinitions(GameplayDefinitions gameplayDefinitions)</div>
-<div class="line">        {</div>
-<div class="line">            <span class="keywordflow">if</span> (IsInitDone())</div>
-<div class="line">            {</div>
-<div class="line">                <span class="keywordflow">if</span> (Tracker.IsReadyToSetDefinitions())</div>
-<div class="line">                    <span class="keywordflow">return</span> Tracker.SetDefinitions(gameplayDefinitions);</div>
-<div class="line">                <span class="keywordflow">else</span></div>
-<div class="line">                    <span class="keywordflow">return</span> LudeoMessage.Error_Action_Not_During_Value_State;</div>
+<div class="line">                ActionBuilders.RequestBeginGameplay(m_systemData);</div>
+<div class="line">                <span class="keywordflow">return</span> m_flowActions.handleBeginSession();</div>
 <div class="line">            }</div>
 <div class="line"> </div>
 <div class="line">            <span class="keywordflow">return</span> LudeoMessage.Error_Need_Init_First;</div>
 <div class="line">        }</div>
+</div><!-- fragment --><ul>
+<li>Once the Player begins to replay the highlighted gameplay, call the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ad5cc5613e9b9a6769a305eda6535388e">SetGameplayState</a> it will set the gameplay state for the player.</li>
+</ul>
+<div class="fragment"><div class="line"><span class="keyword">public</span> <span class="keyword">static</span> LudeoMessage SetGameplayState(<span class="keywordtype">string</span> key, <span class="keywordtype">int</span> value) { <span class="keywordflow">return</span> Tracker.SetValue(key, value); }</div>
 </div><!-- fragment --> <h3><a class="anchor" id="autotoc_md40"></a>
 Step 3: Summary</h3>
 <p>After playing Ludeo, LudeoDK will calculate and display the player's score based on his actions and the scoring parameters specified by the creator. </p>
