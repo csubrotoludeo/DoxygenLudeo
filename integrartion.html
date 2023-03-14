@@ -118,9 +118,9 @@ Setup and Install</h1>
 Prerequisites</h2>
 <p>Before integrating your game with Ludeo, please ensure that you have completed the following:</p><ul>
 <li>Unity <b>2019</b> or a <b>later</b> version.</li>
-<li>Obtain <b>gameId</b> and <b>apiKey</b> from the developers of the Ludeo SDK.</li>
-<li>Get the <b>LudeoDK Unity Package</b>.</li>
-<li>Get <b>Player Steam Id</b> from your Steam game launcher. </li>
+<li>Obtain <b>apiKey</b> from the developers of the Ludeo SDK.</li>
+<li>Get the <b>Ludeo SDK Unity Package</b>.</li>
+<li>Get <b>Game Steam Id</b> from your Steam game launcher. </li>
 </ul>
 <h2><a class="anchor" id="autotoc_md20"></a>
 Integration</h2>
@@ -129,11 +129,11 @@ Integration</h2>
 </div>
 <p>To integrate your game with our Ludeo Development Kit, follow the steps below: </p>
 <h3><a class="anchor" id="autotoc_md21"></a>
-Step 1: Import LudeoDK Unity Package</h3>
-<p>Import the LudeoDK Unity package to your project, by following the steps below:</p><ul>
+Step 1: Import Ludeo SDK Unity Package</h3>
+<p>Import the Ludeo SDK Unity package to your project, by following the steps below:</p><ul>
 <li>Click <b>Assets</b>.</li>
 <li>Click <b>Import Package</b> &gt; <b>Custom Package</b>.</li>
-<li>Select the <b>LudeoDK Unity</b> package on your device.</li>
+<li>Select the <b>Ludeo SDK Unity</b> package on your device.</li>
 <li>Click <b>Import</b>.</li>
 </ul>
 <div class="image">
@@ -141,11 +141,18 @@ Step 1: Import LudeoDK Unity Package</h3>
 </div>
 <h3><a class="anchor" id="autotoc_md22"></a>
 Step 2: Integrate Your Game with Our SDK</h3>
-<p>After importing our LudeoDK Unity package, you must follow the steps below to integrate your game with our SDK:</p><ul>
-<li>Select <b><a class="el" href="namespace_ludeo_s_d_k.html">LudeoSDK</a></b> &gt; <b>Resources</b>.</li>
-<li>Click <b>LudeoSettings</b>.</li>
-<li>Enter your <b>Game Id</b> and <b>Game Name</b>.</li>
-<li>Save your project.</li>
+<p>After importing our Ludeo SDK Unity package, you must follow the steps below to integrate your game with our SDK:</p><ul>
+<li>Select <b>StreamingAssets</b> &gt; <b>LudeoSDK</b>.</li>
+<li>Click <b>LudeoSettings.json</b>.</li>
+<li>Enter your <b>apiKey</b> with the code format below:</li>
+</ul>
+<div class="fragment"><div class="line">&quot;apiKey&quot;: &quot;&lt;yourApiKey&gt;&quot;</div>
+</div><!-- fragment --><ul>
+<li>Head back to Unity.</li>
+<li>Select <b>LudeoSDK</b> &gt; <b>Resource</b>.</li>
+<li>Click <b>LudeoSettings</b> Unity script.</li>
+<li>Enter your <b>Game Name</b> and <b>Game Version</b>.</li>
+<li>Save your Project.</li>
 </ul>
 <div class="image">
 <img src="integration2.gif" alt=""/>
@@ -158,61 +165,19 @@ Step 3: Build and Run Your Project</h3>
 <div class="image">
 <img src="integration3.gif" alt=""/>
 </div>
-<h1><a class="anchor" id="installsampleapp"></a>
-How to Install Sample App</h1>
-<p>✈️ A quick guide for you to learn how to install the Ludeo Sample Application. Follow the guide below on how to install Ludeo Sample App:</p>
-<div class="image">
-<img src="sampleapp.png" alt=""/>
-</div>
-<h2><a class="anchor" id="autotoc_md24"></a>
-Step 1: Download or Clone the Sample App Repo</h2>
-<p>Before installing the sample app, download or clone the Ludeo Sample App GitHub repository. You can clone the repo or download the repo in .zip format. To clone the repo, use this link: <a href="https://github.com/EdgeGamingGG/MFPS.git">https://github.com/EdgeGamingGG/MFPS.git</a> </p><dl class="section note"><dt>Note</dt><dd>Make sure you have already checked out the <b>nbger/sdk/3_0_integration_2</b> branch.</dd></dl>
-<div class="image">
-<img src="image3.png" alt=""/>
-</div>
-<h2><a class="anchor" id="autotoc_md25"></a>
-Step 2: Open the Project</h2>
-<p>After downloading or cloning the Github repo, open the project using the Unity application. Follow the steps below: </p><dl class="section note"><dt>Note</dt><dd>Ludeo Sample Application is compatible only with <b>Unity 2019.4.40f1</b>. Ensure that the appropriate Unity version has been installed on your device.</dd></dl>
-<ul>
-<li>Extract the **.zip** files.</li>
-<li>Open the <b>Unity Hub</b>.</li>
-<li>Locate the project on your device.</li>
-<li>Open the Project by clicking the <b>Open</b> button.</li>
-</ul>
-<div class="image">
-<img src="step1.gif" alt=""/>
-</div>
-<h2><a class="anchor" id="autotoc_md26"></a>
-Step 3: Start the Sample Application</h2>
-<p>Wait for all of the assets in the Unity hub to be loaded, and follow the steps below:</p><ul>
-<li>Select <b>Assets</b>.</li>
-<li>Click the <b>MFPS folder</b>.</li>
-<li>Click the <b>Scenes folder</b>.</li>
-<li>Select the <b>MainMenu</b> file.</li>
-<li>Click the <b>Play</b> button on top of your screen.</li>
-</ul>
-<div class="image">
-<img src="step2.gif" alt=""/>
-</div>
-<h2><a class="anchor" id="autotoc_md27"></a>
-Step 4: Play the Game</h2>
-<p>Click the <b>Play</b> button on the <b>Sample App main menu</b> to start the game.</p>
-<div class="image">
-<img src="step3.gif" alt=""/>
-</div>
 <h1><a class="anchor" id="section3"></a>
 User Flows</h1>
 <p>🚀Learn how the Ludeo's Creator and Player Flows work.</p>
-<p>Flow is the procedure or actions that each user takes when using a Ludeo. Creators and players are the two categories of users who interact with Ludeo the most. The <b>Player</b> will re-enact the scenario created by the Creator, while the <b>Creator</b> will create a Ludeo based on the gameplay captured with the LudeoDK. Below are the details of the Creator and Player flows: </p>
-<h2><a class="anchor" id="autotoc_md28"></a>
+<p>Flow is the procedure or actions that each user takes when using a Ludeo. Creators and players are the two categories of users who interact with Ludeo the most. The <b>Player</b> will re-enact the scenario created by the Creator, while the <b>Creator</b> will create a Ludeo based on the gameplay captured with the Ludeo SDK. Below are the details of the Creator and Player flows: </p>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Creator Flow</h2>
 <div class="image">
 <img src="creator.png" alt=""/>
 </div>
- <h3><a class="anchor" id="autotoc_md29"></a>
+ <h3><a class="anchor" id="autotoc_md25"></a>
 Step 1: Creator Launch the Game</h3>
 <p>The first step for Creator is to launch the game that has been integrated with Ludeo.</p><ul>
-<li>Initialize LudeoDk by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init</a> method.</li>
+<li>Initialize Ludeo SDk by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init</a> method.</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_Init()</div>
 <div class="line">{</div>
@@ -234,61 +199,61 @@ Step 1: Creator Launch the Game</h3>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">switch</span> (ludeoFlowState)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForInit:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForInit:</div>
 <div class="line">            <span class="comment">// Code for WaitingForInit</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Initialization:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.Initialization:</div>
 <div class="line">            <span class="comment">// Code for Initialization</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForLoadGameplayData:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForLoadGameplayData:</div>
 <div class="line">            <span class="comment">// Code for Initialization</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LoadingGameplayData:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.LoadingGameplayData:</div>
 <div class="line">            <span class="comment">// Code for LoadingGameplayData</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayDataReady:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayDataReady:</div>
 <div class="line">            <span class="comment">// Code for GameplayDataReady</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForSetGameplayDefinitions:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForSetGameplayDefinitions:</div>
 <div class="line">            <span class="comment">// Code for WaitingForSetGameplayDefinitions</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGetGameplayDefinitions:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForGetGameplayDefinitions:</div>
 <div class="line">            <span class="comment">// Code for WaitingForGetGameplayDefinitions</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForReadyForGameplay:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForReadyForGameplay:</div>
 <div class="line">            <span class="comment">// Code for WaitingForReadyForGameplay</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ReadyingGameplay:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.ReadyingGameplay:</div>
 <div class="line">            <span class="comment">// Code for ReadyingGameplay</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGameplayBegin:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForGameplayBegin:</div>
 <div class="line">            <span class="comment">// Code for WaitingForGameplayBegin</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LudeoRestarted:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.LudeoRestarted:</div>
 <div class="line">            <span class="comment">// Code for LudeoRestarted</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayOn:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayOn:</div>
 <div class="line">            <span class="comment">// Code for GameplayOn</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayPaused:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayPaused:</div>
 <div class="line">            <span class="comment">// Code for GameplayPaused</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayEnded:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayEnded:</div>
 <div class="line">            <span class="comment">// Code for GameplayEnded</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayAborted:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayAborted:</div>
 <div class="line">            <span class="comment">// Code for GameplayAborted</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ModeOver:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.ModeOver:</div>
 <div class="line">            <span class="comment">// Code for ModeOver</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ScreenDisplayed:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.ScreenDisplayed:</div>
 <div class="line">            <span class="comment">// Code for ScreenDisplayed</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Error:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.Error:</div>
 <div class="line">            <span class="comment">// Code for Error</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForUserInteraciton:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForUserInteraciton:</div>
 <div class="line">            <span class="comment">// Code for WaitingForUserInteraciton</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">default</span>:</div>
@@ -296,6 +261,7 @@ Step 1: Creator Launch the Game</h3>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="anamespace_ludeo_s_d_k_html_ac1102afccace80ee8aac5dfedfd30ab7"><div class="ttname"><a href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoSDK.LudeoFlowState</a></div><div class="ttdeci">LudeoFlowState</div><div class="ttdoc">The Flow State in Ludeo SDK.</div><div class="ttdef"><b>Definition:</b> Vars.cs:418</div></div>
 </div><!-- fragment --><p> This will return a message if initialization success or not.</p><ul>
 <li>Set the gameplay definitions object for the current gameplay by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions</a>.</li>
 </ul>
@@ -337,7 +303,7 @@ Step 1: Creator Launch the Game</h3>
 <div class="line">    var ok = LudeoManager.ReadyForGameplay();</div>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - ReadyForGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md30"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md26"></a>
 Step 2: Play the Game</h3>
 <p>Once everything setup, the creator can start the game by following the steps below:</p><ul>
 <li>Begin a Ludeo session with the creator's settings by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay</a> method.</li>
@@ -347,7 +313,7 @@ Step 2: Play the Game</h3>
 <div class="line">    var ok = LudeoManager.BeginGameplay();</div>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - BeginGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
-</div><!-- fragment --><p> LudeoDk will return a message if there is an error with the session.</p><ul>
+</div><!-- fragment --><p> Ludeo SDk will return a message if there is an error with the session.</p><ul>
 <li>Creator set the gameplay state by using the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ad5cc5613e9b9a6769a305eda6535388e">SetGameplayState</a> method below:</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_SetGameplayState()</div>
@@ -355,22 +321,29 @@ Step 2: Play the Game</h3>
 <div class="line">    var ok = LudeoManager.SetGameplayState(<span class="stringliteral">&quot;LocalPlayerHP&quot;</span>, _currentHealth);</div>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - SetGameplayState LocalPlayerHP = &quot;</span> + ok);</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md27"></a>
 Step 3: Capture the Highlight</h3>
 <p>Once the creator is in the game, they can capture the gameplay. The saved media will be marked as a highlight by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">MarkHighlight</a> method below: </p><div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_MarkHighlight()</div>
 <div class="line">{</div>
 <div class="line">    var ok = LudeoManager.MarkHighlight();</div>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - MarkHighlight = &quot;</span> + ok);</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md32"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md28"></a>
+Step 4: End the Game</h3>
+<p>Creator has to end the game after mark highlighting a duration of gameplay by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">EndGameplay</a> method below: </p><div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_EndGameplay()</div>
+<div class="line">{</div>
+<div class="line">    var ok = LudeoManager.EndGameplay();</div>
+<div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - EndGameplay = &quot;</span> + ok);</div>
+<div class="line">}</div>
+</div><!-- fragment --> <h2><a class="anchor" id="autotoc_md29"></a>
 Player Flow</h2>
 <div class="image">
 <img src="player.png" alt=""/>
 </div>
- <h3><a class="anchor" id="autotoc_md33"></a>
+ <h3><a class="anchor" id="autotoc_md30"></a>
 Step 1: Player Launch Ludeo</h3>
 <p>The Player will click the links or hit the Play button to Play Ludeo.</p><ul>
-<li>Initialize LudeoDk by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init</a> method below:</li>
+<li>Initialize Ludeo SDk by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init</a> method below:</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_Init()</div>
 <div class="line">{</div>
@@ -392,61 +365,61 @@ Step 1: Player Launch Ludeo</h3>
 <div class="line">{</div>
 <div class="line">    <span class="keywordflow">switch</span> (ludeoFlowState)</div>
 <div class="line">    {</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForInit:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForInit:</div>
 <div class="line">            <span class="comment">// Code for WaitingForInit</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Initialization:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.Initialization:</div>
 <div class="line">            <span class="comment">// Code for Initialization</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForLoadGameplayData:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForLoadGameplayData:</div>
 <div class="line">            <span class="comment">// Code for Initialization</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LoadingGameplayData:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.LoadingGameplayData:</div>
 <div class="line">            <span class="comment">// Code for LoadingGameplayData</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayDataReady:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayDataReady:</div>
 <div class="line">            <span class="comment">// Code for GameplayDataReady</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForSetGameplayDefinitions:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForSetGameplayDefinitions:</div>
 <div class="line">            <span class="comment">// Code for WaitingForSetGameplayDefinitions</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGetGameplayDefinitions:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForGetGameplayDefinitions:</div>
 <div class="line">            <span class="comment">// Code for WaitingForGetGameplayDefinitions</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForReadyForGameplay:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForReadyForGameplay:</div>
 <div class="line">            <span class="comment">// Code for WaitingForReadyForGameplay</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ReadyingGameplay:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.ReadyingGameplay:</div>
 <div class="line">            <span class="comment">// Code for ReadyingGameplay</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForGameplayBegin:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForGameplayBegin:</div>
 <div class="line">            <span class="comment">// Code for WaitingForGameplayBegin</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.LudeoRestarted:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.LudeoRestarted:</div>
 <div class="line">            <span class="comment">// Code for LudeoRestarted</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayOn:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayOn:</div>
 <div class="line">            <span class="comment">// Code for GameplayOn</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayPaused:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayPaused:</div>
 <div class="line">            <span class="comment">// Code for GameplayPaused</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayEnded:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayEnded:</div>
 <div class="line">            <span class="comment">// Code for GameplayEnded</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.GameplayAborted:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.GameplayAborted:</div>
 <div class="line">            <span class="comment">// Code for GameplayAborted</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ModeOver:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.ModeOver:</div>
 <div class="line">            <span class="comment">// Code for ModeOver</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.ScreenDisplayed:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.ScreenDisplayed:</div>
 <div class="line">            <span class="comment">// Code for ScreenDisplayed</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.Error:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.Error:</div>
 <div class="line">            <span class="comment">// Code for Error</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
-<div class="line">        <span class="keywordflow">case</span> LudeoFlowState.WaitingForUserInteraciton:</div>
+<div class="line">        <span class="keywordflow">case</span> <a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a>.WaitingForUserInteraciton:</div>
 <div class="line">            <span class="comment">// Code for WaitingForUserInteraciton</span></div>
 <div class="line">            <span class="keywordflow">break</span>;</div>
 <div class="line">        <span class="keywordflow">default</span>:</div>
@@ -455,7 +428,7 @@ Step 1: Player Launch Ludeo</h3>
 <div class="line">    }</div>
 <div class="line">}</div>
 </div><!-- fragment --><p> This will return a message if initialization success or not.</p><ul>
-<li>LudeoDK will fetch and load Gameplay data needed the replay the gameplay by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LoadGameplayData</a> method below:</li>
+<li>Ludeo SDK will fetch and load Gameplay data needed the replay the gameplay by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LoadGameplayData</a> method below:</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_LoadGameplayData()</div>
 <div class="line">{</div>
@@ -463,7 +436,7 @@ Step 1: Player Launch Ludeo</h3>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - LoadGameplayData = &quot;</span> + ok);</div>
 <div class="line">}</div>
 </div><!-- fragment --><ul>
-<li>LudeoDk will fetch and load the gameplay definitions for the currently selected Ludeo by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitions</a> method below:</li>
+<li>Ludeo SDk will fetch and load the gameplay definitions for the currently selected Ludeo by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitions</a> method below:</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_GetGameplayDefinitionsKeys()</div>
 <div class="line">{</div>
@@ -483,22 +456,23 @@ Step 1: Player Launch Ludeo</h3>
 <div class="line">        Debug.Log(<span class="stringliteral">&quot;Vec3 key found: &quot;</span> + k + <span class="stringliteral">&quot; value is: &quot;</span> + v.ToString());</div>
 <div class="line">    }</div>
 <div class="line"> </div>
-<div class="line">    LudeoManager.GetGameplayDefinitionsKeys(LudeoParam.String, out keys);</div>
+<div class="line">    LudeoManager.GetGameplayDefinitionsKeys(<a class="code hl_enumeration" href="namespace_ludeo_s_d_k.html#a5e540b890d69085c8f0ed6b86532d450">LudeoParam</a>.String, out keys);</div>
 <div class="line">    <span class="keywordflow">foreach</span> (var k <span class="keywordflow">in</span> keys)</div>
 <div class="line">    {</div>
 <div class="line">        LudeoManager.GetGameplayDefinition(k, out <span class="keywordtype">string</span> v);</div>
 <div class="line">        Debug.Log(<span class="stringliteral">&quot;String key found: &quot;</span> + k + <span class="stringliteral">&quot; value is: &quot;</span> + v);</div>
 <div class="line">    }</div>
 <div class="line">}</div>
+<div class="ttc" id="anamespace_ludeo_s_d_k_html_a5e540b890d69085c8f0ed6b86532d450"><div class="ttname"><a href="namespace_ludeo_s_d_k.html#a5e540b890d69085c8f0ed6b86532d450">LudeoSDK.LudeoParam</a></div><div class="ttdeci">LudeoParam</div><div class="ttdoc">Ludeo Parameter Types supported by Ludeo SDK.</div><div class="ttdef"><b>Definition:</b> Vars.cs:356</div></div>
 </div><!-- fragment --><ul>
-<li>After everything has been loaded, the gameplay is ready to replay and the LudeoDk Ui will be displayed by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay</a> method below:</li>
+<li>After everything has been loaded, the gameplay is ready to replay and the Ludeo SDk Ui will be displayed by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay</a> method below:</li>
 </ul>
 <div class="fragment"><div class="line"><span class="keyword">private</span> <span class="keywordtype">void</span> Use_Example_ReadyForGameplay()</div>
 <div class="line">{</div>
 <div class="line">    var ok = LudeoManager.ReadyForGameplay();</div>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - ReadyForGameplay = &quot;</span> + ok);</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md34"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md31"></a>
 Step 2: Player Plays Ludeo</h3>
 <p>Once everything has been loaded, Ludeo will be launched.</p><ul>
 <li>Player will begin a Ludeo session with the end conditions, goals, and score parameters that have been set by the creator by calling the <a href="https://csubrotoludeo.github.io/DoxygenLudeo/class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay</a> method below:</li>
@@ -516,9 +490,9 @@ Step 2: Player Plays Ludeo</h3>
 <div class="line">    var ok = LudeoManager.SetGameplayState(<span class="stringliteral">&quot;LocalPlayerHP&quot;</span>, _currentHealth);</div>
 <div class="line">    Debug.Log(<span class="stringliteral">&quot;[Response] - SetGameplayState LocalPlayerHP = &quot;</span> + ok);</div>
 <div class="line">}</div>
-</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md35"></a>
+</div><!-- fragment --> <h3><a class="anchor" id="autotoc_md32"></a>
 Step 3: Summary</h3>
-<p>After playing Ludeo, LudeoDK will calculate and display the player's score based on his actions and the scoring parameters specified by the creator. </p>
+<p>After playing Ludeo, Ludeo SDK will calculate and display the player's score based on his actions and the scoring parameters specified by the creator. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

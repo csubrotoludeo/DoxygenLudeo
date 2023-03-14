@@ -110,7 +110,9 @@ $(document).ready(function(){initNavTree('namespace_ludeo_s_d_k.html',''); initR
 <div class="header">
   <div class="summary">
 <a href="#nested-classes">Classes</a> &#124;
-<a href="#typedef-members">Typedefs</a>  </div>
+<a href="#typedef-members">Typedefs</a> &#124;
+<a href="#enum-members">Enumerations</a> &#124;
+<a href="#func-members">Functions</a>  </div>
   <div class="headertitle"><div class="title">LudeoSDK Namespace Reference</div></div>
 </div><!--header-->
 <div class="contents">
@@ -129,7 +131,209 @@ Typedefs</h2></td></tr>
 <tr class="memitem:a928e54cdc131b05644a11274d2ce16b1"><td class="memItemLeft" align="right" valign="top"><a id="a928e54cdc131b05644a11274d2ce16b1" name="a928e54cdc131b05644a11274d2ce16b1"></a>
 using&#160;</td><td class="memItemRight" valign="bottom"><b>Debug</b> = UnityEngine.Debug</td></tr>
 <tr class="separator:a928e54cdc131b05644a11274d2ce16b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="enum-members" name="enum-members"></a>
+Enumerations</h2></td></tr>
+<tr class="memitem:a4816548b54861199025f30544dc2c4e1"><td class="memItemLeft" align="right" valign="top"><a id="a4816548b54861199025f30544dc2c4e1" name="a4816548b54861199025f30544dc2c4e1"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#a4816548b54861199025f30544dc2c4e1">LudeoLogLevel</a> : byte { <b>Info</b> =0
+, <b>Warning</b> =1
+, <b>Error</b> =2
+, <b>Off</b> =3
+ }</td></tr>
+<tr class="memdesc:a4816548b54861199025f30544dc2c4e1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_ludeo_s_d_k.html">LudeoSDK</a> logging level. <br /></td></tr>
+<tr class="separator:a4816548b54861199025f30544dc2c4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e540b890d69085c8f0ed6b86532d450"><td class="memItemLeft" align="right" valign="top"><a id="a5e540b890d69085c8f0ed6b86532d450" name="a5e540b890d69085c8f0ed6b86532d450"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#a5e540b890d69085c8f0ed6b86532d450">LudeoParam</a> { <br />
+&#160;&#160;<b>Bool</b> = 0
+, <b>Int</b>
+, <b>Float</b>
+, <b>Vec3</b>
+, <br />
+&#160;&#160;<b>String</b>
+, <b>Objects</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a5e540b890d69085c8f0ed6b86532d450"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ludeo Parameter Types supported by Ludeo SDK. <br /></td></tr>
+<tr class="separator:a5e540b890d69085c8f0ed6b86532d450"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87be2a01ab30c8df1da3b05875bf6605"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#a87be2a01ab30c8df1da3b05875bf6605">LudeoGameplayType</a> { <a class="el" href="namespace_ludeo_s_d_k.html#a87be2a01ab30c8df1da3b05875bf6605a7f3d370e94c8b1fea09838572013d8ec">InGame</a> = 1
+, <a class="el" href="namespace_ludeo_s_d_k.html#a87be2a01ab30c8df1da3b05875bf6605a5ee2568375bf3967422d2343fc880a9c">InLudeo</a>
+ }</td></tr>
+<tr class="memdesc:a87be2a01ab30c8df1da3b05875bf6605"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Gameplay types the Ludeo SDK is opperating in.  <a href="namespace_ludeo_s_d_k.html#a87be2a01ab30c8df1da3b05875bf6605">More...</a><br /></td></tr>
+<tr class="separator:a87be2a01ab30c8df1da3b05875bf6605"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55d7aa2e4961e40689558e0c12c66ed0"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#a55d7aa2e4961e40689558e0c12c66ed0">LudeoModeType</a> { <a class="el" href="namespace_ludeo_s_d_k.html#a55d7aa2e4961e40689558e0c12c66ed0a43669d2b74979b5af8dda36515225d47">onModeReady</a>
+, <a class="el" href="namespace_ludeo_s_d_k.html#a55d7aa2e4961e40689558e0c12c66ed0ae4de2476331741dbeefc26461a39d835">onModeFailure</a>
+, <a class="el" href="namespace_ludeo_s_d_k.html#a55d7aa2e4961e40689558e0c12c66ed0aceb54caa51e4952538b8fe30ecada337">onModeOver</a>
+ }</td></tr>
+<tr class="memdesc:a55d7aa2e4961e40689558e0c12c66ed0"><td class="mdescLeft">&#160;</td><td class="mdescRight">The mode the Ludeo SDK is opperating in.  <a href="namespace_ludeo_s_d_k.html#a55d7aa2e4961e40689558e0c12c66ed0">More...</a><br /></td></tr>
+<tr class="separator:a55d7aa2e4961e40689558e0c12c66ed0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac1102afccace80ee8aac5dfedfd30ab7"><td class="memItemLeft" align="right" valign="top"><a id="ac1102afccace80ee8aac5dfedfd30ab7" name="ac1102afccace80ee8aac5dfedfd30ab7"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a> { <br />
+&#160;&#160;<b>Null</b>
+, <b>WaitingForInit</b>
+, <b>Initialization</b>
+, <b>WaitingForLoadGameplayData</b>
+, <br />
+&#160;&#160;<b>LoadingGameplayData</b>
+, <b>GameplayDataReady</b>
+, <b>WaitingForSetGameplayDefinitions</b>
+, <b>WaitingForGetGameplayDefinitions</b>
+, <br />
+&#160;&#160;<b>WaitingForReadyForGameplay</b>
+, <b>ReadyingGameplay</b>
+, <b>WaitingForGameplayBegin</b>
+, <b>LudeoRestarted</b>
+, <br />
+&#160;&#160;<b>GameplayOn</b>
+, <b>GameplayPaused</b>
+, <b>GameplayResumed</b>
+, <b>GameplayEnded</b>
+, <br />
+&#160;&#160;<b>GameplayAborted</b>
+, <b>ModeOver</b>
+, <b>ScreenDisplayed</b>
+, <b>Error</b>
+, <br />
+&#160;&#160;<b>WaitingForUserInteraciton</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:ac1102afccace80ee8aac5dfedfd30ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Flow State in Ludeo SDK. <br /></td></tr>
+<tr class="separator:ac1102afccace80ee8aac5dfedfd30ab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea362681bb917d214d4f01342e6afa8e"><td class="memItemLeft" align="right" valign="top"><a id="aea362681bb917d214d4f01342e6afa8e" name="aea362681bb917d214d4f01342e6afa8e"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#aea362681bb917d214d4f01342e6afa8e">LudeoLauncher</a> { <b>Steam</b>
+ }</td></tr>
+<tr class="memdesc:aea362681bb917d214d4f01342e6afa8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">The launcher type with used to launch the game. <br /></td></tr>
+<tr class="separator:aea362681bb917d214d4f01342e6afa8e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a385dc008255d673f18642af53208d2c3"><td class="memItemLeft" align="right" valign="top"><a id="a385dc008255d673f18642af53208d2c3" name="a385dc008255d673f18642af53208d2c3"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#a385dc008255d673f18642af53208d2c3">LudeoMessage</a> { <br />
+&#160;&#160;<b>Success</b>
+, <b>Warning_Already_Initialized</b>
+, <b>Warning_Already_Started</b>
+, <b>Warning_Already_Stopped</b>
+, <br />
+&#160;&#160;<b>Warning_Not_Tracking</b>
+, <b>Warning_May_Not_Reset_While_Tacking</b>
+, <b>Warning_Breaking_Version</b>
+, <b>Error_General</b>
+, <br />
+&#160;&#160;<b>Error_Gameplay_Definitions_Null</b>
+, <b>Error_Action_Not_During_Value_State</b>
+, <b>Error_Not_Tracking</b>
+, <b>Error_Need_Init_First</b>
+, <br />
+&#160;&#160;<b>Error_Read_Version</b>
+, <b>Error_Ludeo_Breaking_Version</b>
+, <b>Error_Invalid_Game_Id</b>
+, <b>Error_Missing_Key</b>
+, <br />
+&#160;&#160;<b>Error_Invalid_Platform_Url</b>
+, <b>Error_Unsupported_Launcher</b>
+, <b>Error_Invalid_Steam_Id</b>
+, <b>Error_Invalid_API_Key</b>
+, <br />
+&#160;&#160;<b>Error_Invalid_Token</b>
+, <b>Error_Logger_Init_Failed</b>
+, <b>Error_Ludeo_Duration_Set_Too_Short</b>
+, <b>Warning_Unhandled</b>
+, <br />
+&#160;&#160;<b>Warning_Out_Of_Turns_Mem</b>
+, <b>Warning_Reached_Value_Limit</b>
+, <b>Warning_Need_End_Before_New_Begin</b>
+, <b>Warning_Need_Start_Before_End</b>
+, <br />
+&#160;&#160;<b>Warning_Not_Setting_Value_Out_of_Turn</b>
+, <b>Warning_Value_Not_Found</b>
+, <b>Warning_Ludeo_Not_Downloaded</b>
+, <b>Error_May_Not_Set_Unnamed_Value</b>
+, <br />
+&#160;&#160;<b>Error_String_Value_Too_Long</b>
+, <b>Error_Empty_Key</b>
+, <b>Error_Must_Register_To_Event</b>
+, <b>Error_Tracking_Only_During_Gameplay</b>
+, <br />
+&#160;&#160;<b>Info_Upload_Started</b>
+, <b>Error_WebSocket_Unhandled_Event</b>
+, <b>Error_Network_Request</b>
+, <b>Error_Uploading_Session_Definitions</b>
+, <br />
+&#160;&#160;<b>Error_Uploading_Highlight</b>
+, <b>Error_Downloading_Ludeo</b>
+, <b>Error_Downloading_Image</b>
+, <b>Error_Parsing_Ludeo</b>
+, <br />
+&#160;&#160;<b>Error_Posting_Score</b>
+, <b>Error_Jumbling</b>
+, <b>Error_Failed_To_Load_LudeoSettings</b>
+, <b>Error_External_Config_Json_Missing</b>
+, <br />
+&#160;&#160;<b>Error_Failed_To_Parse_External_Parameters_From_Json</b>
+, <b>Error_Read_Local_Config_System</b>
+, <b>Warning_Game_Logo_Not_Set</b>
+, <b>Warning_Unhandled_Json_Key</b>
+<br />
+ }</td></tr>
+<tr class="memdesc:a385dc008255d673f18642af53208d2c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Feedback status from Ludeo SDK. <br /></td></tr>
+<tr class="separator:a385dc008255d673f18642af53208d2c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
+Functions</h2></td></tr>
+<tr class="memitem:aeae246b0ec2bffdad6e5bae627531197"><td class="memItemLeft" align="right" valign="top"><a id="aeae246b0ec2bffdad6e5bae627531197" name="aeae246b0ec2bffdad6e5bae627531197"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>Callback</b> ()</td></tr>
+<tr class="separator:aeae246b0ec2bffdad6e5bae627531197"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c420a9e5b5b39da189058ca96921610"><td class="memItemLeft" align="right" valign="top"><a id="a5c420a9e5b5b39da189058ca96921610" name="a5c420a9e5b5b39da189058ca96921610"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>CallbackWithLudeoLudeoFlowState</b> (<a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">LudeoFlowState</a> ludeoFlowState)</td></tr>
+<tr class="separator:a5c420a9e5b5b39da189058ca96921610"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a009efda2b40a77d99f0de8af8517e8c8"><td class="memItemLeft" align="right" valign="top"><a id="a009efda2b40a77d99f0de8af8517e8c8" name="a009efda2b40a77d99f0de8af8517e8c8"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>CallbackWithString</b> (string content)</td></tr>
+<tr class="separator:a009efda2b40a77d99f0de8af8517e8c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01d24a9dcb834d826d27134a62d8b8cd"><td class="memItemLeft" align="right" valign="top"><a id="a01d24a9dcb834d826d27134a62d8b8cd" name="a01d24a9dcb834d826d27134a62d8b8cd"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>CallbackWithLudeoMessage</b> (out <a class="el" href="namespace_ludeo_s_d_k.html#a385dc008255d673f18642af53208d2c3">LudeoMessage</a> message)</td></tr>
+<tr class="separator:a01d24a9dcb834d826d27134a62d8b8cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e1f7ea5ceb2b01a6bdd9451294720c7"><td class="memItemLeft" align="right" valign="top"><a id="a5e1f7ea5ceb2b01a6bdd9451294720c7" name="a5e1f7ea5ceb2b01a6bdd9451294720c7"></a>
+delegate void&#160;</td><td class="memItemRight" valign="bottom"><b>CallbackWithLudeoMessageInfo</b> (<a class="el" href="namespace_ludeo_s_d_k.html#a385dc008255d673f18642af53208d2c3">LudeoMessage</a> message, string info)</td></tr>
+<tr class="separator:a5e1f7ea5ceb2b01a6bdd9451294720c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Enumeration Type Documentation</h2>
+<a id="a87be2a01ab30c8df1da3b05875bf6605" name="a87be2a01ab30c8df1da3b05875bf6605"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87be2a01ab30c8df1da3b05875bf6605">&#9670;&#160;</a></span>LudeoGameplayType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_ludeo_s_d_k.html#a87be2a01ab30c8df1da3b05875bf6605">LudeoSDK.LudeoGameplayType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The Gameplay types the Ludeo SDK is opperating in. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a87be2a01ab30c8df1da3b05875bf6605a7f3d370e94c8b1fea09838572013d8ec" name="a87be2a01ab30c8df1da3b05875bf6605a7f3d370e94c8b1fea09838572013d8ec"></a>InGame&#160;</td><td class="fielddoc"><p>Users who play the game and track its data in order to create Ludeos without playing a Ludeo. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a87be2a01ab30c8df1da3b05875bf6605a5ee2568375bf3967422d2343fc880a9c" name="a87be2a01ab30c8df1da3b05875bf6605a5ee2568375bf3967422d2343fc880a9c"></a>InLudeo&#160;</td><td class="fielddoc"><p>Users who wish to replay published Ludeos. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
+<a id="a55d7aa2e4961e40689558e0c12c66ed0" name="a55d7aa2e4961e40689558e0c12c66ed0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a55d7aa2e4961e40689558e0c12c66ed0">&#9670;&#160;</a></span>LudeoModeType</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">enum <a class="el" href="namespace_ludeo_s_d_k.html#a55d7aa2e4961e40689558e0c12c66ed0">LudeoSDK.LudeoModeType</a></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>The mode the Ludeo SDK is opperating in. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a55d7aa2e4961e40689558e0c12c66ed0a43669d2b74979b5af8dda36515225d47" name="a55d7aa2e4961e40689558e0c12c66ed0a43669d2b74979b5af8dda36515225d47"></a>onModeReady&#160;</td><td class="fielddoc"><p>Be notified when Ludeo SDK is ready to run in the chosen LudeoModeType as set with SetUserMode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a55d7aa2e4961e40689558e0c12c66ed0ae4de2476331741dbeefc26461a39d835" name="a55d7aa2e4961e40689558e0c12c66ed0ae4de2476331741dbeefc26461a39d835"></a>onModeFailure&#160;</td><td class="fielddoc"><p>Be notified on failure, when Ludeo SDK is NOT ready to run in the LudeoModeType mode as set with SetUserMode. </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a55d7aa2e4961e40689558e0c12c66ed0aceb54caa51e4952538b8fe30ecada337" name="a55d7aa2e4961e40689558e0c12c66ed0aceb54caa51e4952538b8fe30ecada337"></a>onModeOver&#160;</td><td class="fielddoc"><p>Be notified when the current mode is over. </p>
+</td></tr>
+</table>
+
+</div>
+</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

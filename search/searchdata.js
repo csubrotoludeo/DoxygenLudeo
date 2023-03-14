@@ -1,10 +1,12 @@
 var indexSectionsWithContent =
 {
-  0: "abegilmprs",
+  0: "abegilmoprs",
   1: "l",
   2: "l",
   3: "abegilmprs",
-  4: "ai"
+  4: "l",
+  5: "io",
+  6: "ai"
 };
 
 var indexSectionNames =
@@ -13,7 +15,9 @@ var indexSectionNames =
   1: "classes",
   2: "namespaces",
   3: "functions",
-  4: "pages"
+  4: "enums",
+  5: "enumvalues",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -22,6 +26,8 @@ var indexSectionLabels =
   1: "Classes",
   2: "Namespaces",
   3: "Functions",
-  4: "Pages"
+  4: "Enumerations",
+  5: "Enumerator",
+  6: "Pages"
 };
 
