@@ -52,7 +52,7 @@ var NAVTREE =
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Members", "functions.html", [
+      [ "Class Functions", "functions.html", [
         [ "All", "functions.html", null ],
       ] ]
     ] ]
