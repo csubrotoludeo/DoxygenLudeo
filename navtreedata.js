@@ -27,35 +27,33 @@ var NAVTREE =
   [ "Ludeo SDK", "index.html", [
     [ "Introduction", "index.html", "index" ],
     [ "Adding Ludeo to Your Game", "integrartion.html", [
-      [ "Setup and Install", "integrartion.html#installation", [
+      [ "Initializations and Setup", "integrartion.html#initializations", [
         [ "Prerequisites", "integrartion.html#autotoc_md19", null ],
         [ "Integration", "integrartion.html#autotoc_md20", [
           [ "Step 1: Import Ludeo SDK Unity Package", "integrartion.html#autotoc_md21", null ],
           [ "Step 2: Integrate Your Game with Our SDK", "integrartion.html#autotoc_md22", null ],
-          [ "Step 3: Build and Run Your Project", "integrartion.html#autotoc_md23", null ]
+          [ "Step 3: Initialize LudeoSDK", "integrartion.html#autotoc_md23", null ]
         ] ]
       ] ],
       [ "User Flows", "integrartion.html#section3", [
         [ "Creator Flow", "integrartion.html#autotoc_md24", [
-          [ "Step 1: Creator Launch the Game", "integrartion.html#autotoc_md25", null ],
+          [ "Step 1: Launch the Game", "integrartion.html#autotoc_md25", null ],
           [ "Step 2: Play the Game", "integrartion.html#autotoc_md26", null ],
           [ "Step 3: Capture the Highlight", "integrartion.html#autotoc_md27", null ],
           [ "Step 4: End the Game", "integrartion.html#autotoc_md28", null ]
         ] ],
         [ "Player Flow", "integrartion.html#autotoc_md29", [
-          [ "Step 1: Player Launch Ludeo", "integrartion.html#autotoc_md30", null ],
-          [ "Step 2: Player Plays Ludeo", "integrartion.html#autotoc_md31", null ],
-          [ "Step 3: Summary", "integrartion.html#autotoc_md32", null ]
+          [ "Step 1: Play the Game", "integrartion.html#autotoc_md30", null ],
+          [ "Step 2: Launch Ludeo", "integrartion.html#autotoc_md31", null ],
+          [ "Step 3: Objective Popup", "integrartion.html#autotoc_md32", null ],
+          [ "Step 4: Summary", "integrartion.html#autotoc_md33", null ]
         ] ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
-      [ "Class Functions", "functions.html", [
+      [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
       ] ]
     ] ]
   ] ]
