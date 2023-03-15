@@ -113,52 +113,45 @@ $(document).ready(function(){initNavTree('integrartion.html',''); initResizable(
 <div class="contents">
 <div class="textblock"><p>🎮 A quickstart guide on integrating your Game with Ludeo, so your game can recreate specific scenarios to be used as a challenge for a more engaged gaming community.</p>
 <h1><a class="anchor" id="initializations"></a>
-Initializations and Setup</h1>
+Setup and Install</h1>
 <h2><a class="anchor" id="autotoc_md19"></a>
 Prerequisites</h2>
 <p>Before integrating your game with Ludeo, please ensure that you have completed the following:</p><ul>
 <li>Unity <b>2019</b> or a <b>later</b> version.</li>
 <li>Obtain <b>apiKey</b> from the developers of the Ludeo SDK.</li>
 <li>Get the <b>Ludeo SDK Unity Package</b>.</li>
-<li>Get <b>Game Steam Id</b> from your Steam game launcher. </li>
+<li>Get <b>Game Steam Id</b> from your Steam game launcher.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md20"></a>
-Integration</h2>
+Add The Ludeo Unity Package To Your Project</h2>
+<p><b>1.</b>&#160;Download the LudeoSDK Unity package.<br  />
+ <b>2.</b>&#160;Import the Unity package into your project.<br  />
+ <b>3.</b>&#160;Upon opening the package you should see the following import dialog: </p><div class="image">
+<img src="import.png" alt=""/>
+</div>
+<p> <b>4.</b>&#160;Once Imported you can start integrating the Ludeo Development Kit.</p>
+<h2><a class="anchor" id="autotoc_md21"></a>
+Integrate with Ludeo Development Kit (LudeoSDK)</h2>
 <div class="image">
 <img src="integrationflow.png" alt=""/>
 </div>
-<p>The integration with Ludeo is required to setup your game parameters and recreate the scenes in the Creator Lab to then publish Ludeos: </p>
-<h3><a class="anchor" id="autotoc_md21"></a>
-Step 1: Import Ludeo SDK Unity Package</h3>
-<p>Import the Ludeo SDK Unity package to your project, by following the steps below:</p><ul>
-<li>Click <b>Assets</b>.</li>
-<li>Click <b>Import Package</b> &gt; <b>Custom Package</b>.</li>
-<li>Select the <b>Ludeo SDK Unity</b> package on your device.</li>
-<li>Click <b>Import</b>.</li>
-</ul>
-<div class="image">
-<img src="integration1.gif" alt=""/>
-</div>
+<p> The integration with Ludeo is required to setup your game parameters and recreate the scenes in the Creator Lab to then publish Ludeos.</p>
 <h3><a class="anchor" id="autotoc_md22"></a>
-Step 2: Integrate Your Game with Our SDK</h3>
-<p>After importing our Ludeo SDK Unity package, you must follow the steps below to integrate your game with our SDK:</p><ul>
-<li>Select <b>LudeoSDK</b> &gt; <b>Resources</b>.</li>
-<li>Click <b>LudeoSettings</b> Unity asset.</li>
-<li>Enter your <b>Game Name</b>, <b>Game Version</b>, and <b>Platform Url</b>.</li>
-<li>Save your Project.</li>
-</ul>
-<div class="image">
-<img src="integration2.gif" alt=""/>
+Initializations and Setup</h3>
+<p><b>1.</b>&#160;Set the following fields in “LudeoSettings.asset” the Unity ScriptableObject at: Assets/StreamingAssets/LudeoSDK/Resources/LudeoSettings.asset -&gt; </p><div class="fragment"><div class="line">”Game Name”:: &lt;replace with your game name&gt;</div>
+<div class="line">”Game Version”: &lt;replace with your game version&gt;</div>
+<div class="line">”Platform Url”: &lt;use the default unless you have got a specific one from Ludeo&gt;</div>
+</div><!-- fragment --><div class="image">
+<img src="initializations.png" alt=""/>
 </div>
-<h3><a class="anchor" id="autotoc_md23"></a>
-Step 3: Initialize LudeoSDK</h3>
-<p>After integrating your game with our SDK, you need to call the Init method to initialize Ludeo SDK: </p><div class="fragment"><div class="line">LudeoManager.Init(<span class="keywordtype">string</span> launcherUserID, </div>
+<p><b>2.</b>&#160;In order to initialize LudeoSDK, you need to call the supplied init method once: </p><div class="fragment"><div class="line">LudeoManager.Init(<span class="keywordtype">string</span> launcherUserID, </div>
 <div class="line">                    LudeoLauncher launcher, </div>
 <div class="line">                    <span class="keywordtype">string</span> apiKey, </div>
 <div class="line">                    CallbackWithLudeoLudeoFlowState ludeoHandler)</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init()</a> for more info.</p>
-<p>Once the LudeoSDK is ready Ludeo will fire the <code>CallbackWithLudeoLudeoFlowState</code> with the state: </p><div class="fragment"><div class="line">WaitingForLoadGameplayData</div>
-</div><!-- fragment --><p> At this point your game is ready to start either the Create or Play Ludeos flows.</p>
+</div><!-- fragment --><p>&#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae1bff352b0bc5639aca6585a508fdbad">Init()</a> for more info.</p>
+<p><b>3.</b>&#160;Once the LudeoSDK is ready Ludeo will fire the <code>CallbackWithLudeoLudeoFlowState</code> with the state:</p>
+<div class="fragment"><div class="line">WaitingForLoadGameplayData</div>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;At this point your game is ready to start either the Create or Play Ludeos flows.</p>
 <dl class="section note"><dt>Note</dt><dd>Be sure to register to <code>CallbackWithLudeoLudeoFlowState</code> so that you can be updated on the Ludeo flow and implement your own functionality when applicable.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>
 As a rule of thumb, the <code>LudeoFlowState</code> fired from <code>CallbackWithLudeoLudeoFlowState</code> prefixed with "WaitingFor" means LudeoSDK is waiting for your actions to continue.</dd></dl>
@@ -166,130 +159,88 @@ As a rule of thumb, the <code>LudeoFlowState</code> fired from <code>CallbackWit
 User Flows</h1>
 <p>🚀Learn how the Ludeo's Creator and Player Flows work.</p>
 <p>Flow is the procedure or actions that each user takes when using a Ludeo. Creators and players are the two categories of users who interact with Ludeo the most. The <b>Player</b> will re-enact the scenario created by the Creator, while the <b>Creator</b> will create a Ludeo based on the gameplay captured with the Ludeo SDK. Below are the details of the Creator and Player flows: </p>
-<h2><a class="anchor" id="autotoc_md24"></a>
+<h2><a class="anchor" id="autotoc_md23"></a>
 Creator Flow</h2>
 <div class="image">
 <img src="creator.png" alt=""/>
 </div>
-<p> Creator Flow is the flow which enables Ludeos creation. Integrate your game with it by following these steps: </p>
-<h3><a class="anchor" id="autotoc_md25"></a>
-Step 1: Launch the Game</h3>
-<p>The first step for Creator is to launch the game that has been integrated with Ludeo.</p><ul>
-<li>On receiving <code>WaitingForLoadGameplayData</code> and when your are ready call:</li>
-</ul>
+<p> Creator Flow is the flow which enables Ludeos creation. Integrate your game with it by following these steps:</p>
+<p><b>1.</b>&#160;On receiving <code>WaitingForLoadGameplayData</code> and when your are ready call:</p>
 <div class="fragment"><div class="line">LudeoManager.GameplayDataReady() </div>
-</div><!-- fragment --><p> See <a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">GameplayDataReady()</a> for more info.</p><ul>
-<li>On receiving <code>WaitingForSetGameplayDefinitions</code> call:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">GameplayDataReady()</a> for more info.</p>
+<p><b>2.</b>&#160;On receiving <code>WaitingForSetGameplayDefinitions</code> call:</p>
 <div class="fragment"><div class="line">LudeoManager.SetGameplayDefinitions(GameplayDefinitions)</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions(GameplayDefinitions)</a> for more info.</p><ul>
-<li>On receiving <code>WaitingForReadyForGameplay</code> and when your gameplay is ready to start call:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions(GameplayDefinitions)</a> for more info.</p>
+<p><b>3.</b>&#160;On receiving <code>WaitingForReadyForGameplay</code> and when your gameplay is ready to start call:</p>
 <div class="fragment"><div class="line">LudeoManager.ReadyForGameplay()</div>
-</div><!-- fragment --><p> For instance: when you are done loading the game data and before showing your game match countdown.</p>
-<p>See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay()</a> for more info. </p>
-<h3><a class="anchor" id="autotoc_md26"></a>
-Step 2: Play the Game</h3>
-<ul>
-<li>On receiving <code>WaitingForGameplayBegin</code> and when your gameplay is beginning or counting down before beginning as in the above example call:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;For instance: when you are done loading the game data and before showing your game match countdown.</p>
+<p>&#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay()</a> for more info.</p>
+<p><b>4.</b>&#160;On receiving <code>WaitingForGameplayBegin</code> and when your gameplay is beginning or counting down before beginning as in the above example call:</p>
 <div class="fragment"><div class="line">LudeoManager.BeginGameplay()</div>
-</div><!-- fragment --><p>See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay()</a> for more info.</p><ul>
-<li>Now that your game is running you can feed the LudeoSDK with any game state variables which you want in order to create Ludeos using:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay()</a> for more info.</p>
+<p><b>5.</b>&#160;Now that your game is running you can feed the LudeoSDK with any game state variables which you want in order to create Ludeos using:</p>
 <div class="fragment"><div class="line">LudeoManager.SetGameplayVariable(<span class="keywordtype">string</span>, value)</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad21c8c94907caeb05716f8ee57b48348">SetGameplayVariable(string, value)</a> for more info.</p>
-<h3><a class="anchor" id="autotoc_md27"></a>
-Step 3: Capture the Highlight</h3>
-<p>To capture a Ludeo highlight at any given time during your gameplay call:</p>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad21c8c94907caeb05716f8ee57b48348">SetGameplayVariable(string, value)</a> for more info.</p>
+<p><b>6.</b>&#160;To capture a Ludeo highlight at any given time during your gameplay call:</p>
 <div class="fragment"><div class="line">LudeoManager.MarkHighlight();</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">MarkHighlight()</a> for more info.</p>
-<dl class="section note"><dt>Note</dt><dd>Calling <code>MarkHighlight()</code> sets the last time frame as a highlight until the moment of calling it.</dd></dl>
-<h3><a class="anchor" id="autotoc_md28"></a>
-Step 4: End the Game</h3>
-<ul>
-<li>When your gameplay run is over (player dies, round is over etc), you need to notify the LudeoSDK by calling:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#acb2041c4432fbe187f45cf583cf0c1d1">MarkHighlight()</a> for more info.</p>
+<p><b>7.</b>&#160;When your gameplay run is over (player dies, round is over etc), you need to notify the LudeoSDK by calling:</p>
 <div class="fragment"><div class="line">LudeoManager.EndGameplay();</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">EndGameplay()</a> for more info.</p><ul>
-<li>When the LudeoSDK has done processing this creation session it will fire <code>WaitingForLoadGameplayData</code> again (step 1) and you can run another session or quit.</li>
-</ul>
-<dl class="section note"><dt>Note</dt><dd>Calling <code>AbortGameplay()</code> will forefit any existing LudeoSDK flow.</dd></dl>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#aa01f6fceadc8ea2ea214c3ecbc5c8ba7">EndGameplay()</a> for more info.</p>
+<p><b>8.</b>&#160;When the LudeoSDK has done processing this creation session it will fire <code>WaitingForLoadGameplayData</code> again (step 1) and you can run another session or quit.</p>
+<dl class="section note"><dt>Note</dt><dd>Calling <code>MarkHighlight()</code> sets the last time frame as a highlight until the moment of calling it.</dd></dl>
+<dl class="section note"><dt>Note</dt><dd>
+Calling <code>AbortGameplay()</code> will forefit any existing LudeoSDK flow.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>
 All unique string keys in Ludeo are limited to 32 characters.</dd></dl>
 <dl class="section note"><dt>Note</dt><dd>
 At EndGameplay(), LudeoSDK uploads any marked highlights to the cloud.</dd></dl>
-<h2><a class="anchor" id="autotoc_md29"></a>
+<h2><a class="anchor" id="autotoc_md24"></a>
 Player Flow</h2>
 <div class="image">
 <img src="player.png" alt=""/>
 </div>
-<p> Player Flow is the flow which enables Ludeos creation. Integrate your game with it by following these steps: </p>
-<h3><a class="anchor" id="autotoc_md30"></a>
-Step 1: Play the Game</h3>
-<p>To start your game to replay a Ludeo:</p><ul>
-<li>Use the <a href="https://developer.valvesoftware.com/wiki/Steam_browser_protocol">steam browser protocol</a>, specifically the rungameid command, followed by the Ludeo id as a parameter. The end result looks like: <code>steam://rungameid/&lt;steam_app_id&gt;/ludeoid%20&lt;ludeo id&gt; ( %20 is a space in the url)</code>. Please provide Ludeo with your <b>steam app id</b>.</li>
-<li>In order to obtain the Ludeo id to be played, you will need to process the incoming parameter in your game:</li>
-<li>Go to your <b>steam dashboard</b> -&gt; your <b>application</b> -&gt; edit <b>steamworks settings</b> -&gt; <b>Installation tab</b> -&gt; <b>General Installation</b> -&gt; Tick the checkbox of <b>Enable Using ISteamApps::GetLaunchCommandLine()</b>.</li>
-<li>In your game use <a href="https://partner.steamgames.com/doc/api/ISteamApps?#GetLaunchCommandLine">ISteamApps::GetLaunchCommandLine()</a>, splitting the argument by the space. For example:</li>
-</ul>
+<p> Player Flow is the flow which enables Ludeos creation. Integrate your game with it by following these steps:</p>
+<p><b>1.</b>&#160;To start your game to replay a Ludeo, use the <a href="https://developer.valvesoftware.com/wiki/Steam_browser_protocol">steam browser protocol</a>, specifically the rungameid command, followed by the Ludeo id as a parameter. The end result looks like: <code>steam://rungameid/&lt;steam_app_id&gt;/ludeoid%20&lt;ludeo id&gt; ( %20 is a space in the url)</code>. Please provide Ludeo with your <b>steam app id</b>.</p>
+<p><b>2.</b>&#160;In order to obtain the Ludeo id to be played, you will need to process the incoming parameter in your game: Go to your steam dashboard -&gt; your application -&gt; edit steamworks settings -&gt; Installation tab -&gt; General Installation -&gt; Tick the checkbox of <b>Enable Using ISteamApps::GetLaunchCommandLine()</b>. In your game use <a href="https://partner.steamgames.com/doc/api/ISteamApps?#GetLaunchCommandLine">ISteamApps::GetLaunchCommandLine()</a>, splitting the argument by the space. For example:</p>
 <div class="fragment"><div class="line">const char SPLIT_CHAR = &#39; &#39;;</div>
 <div class="line">const int COMMAND_LINE_STRING_BUFFER_SIZE = 260;</div>
 <div class="line">string commandLineArgs;</div>
 <div class="line">SteamApps.GetLaunchCommandLine(out commandLineArgs, </div>
 <div class="line">COMMAND_LINE_STRING_BUFFER_SIZE);</div>
 <div class="line">string[] args = commandLineArgs.Split(SPLIT_CHAR);</div>
-</div><!-- fragment --><h3><a class="anchor" id="autotoc_md31"></a>
-Step 2: Launch Ludeo</h3>
-<p>Now that you’ve followed the previous steps:</p><ul>
-<li>when receiving the <code>WaitingForLoadGameplayData</code>, you have the Ludeo Id so you can use it to call:</li>
-</ul>
+</div><!-- fragment --><p><b>3.</b>&#160;Now that you’ve followed the previous steps, when receiving the <code>WaitingForLoadGameplayData</code>, you have the Ludeo Id so you can use it to call:</p>
 <div class="fragment"><div class="line">LudeoManager.GameplayDataReady(Guid ludeoId)</div>
-</div><!-- fragment --><p> See <a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">GameplayDataReady(Guid)</a> for more info</p>
-<ul>
-<li>On receiving <code>WaitingForGetGameplayDefinitions</code> call:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">GameplayDataReady(Guid)</a> for more info</p>
+<p><b>4.</b>&#160;On receiving <code>WaitingForGetGameplayDefinitions</code> call:</p>
 <div class="fragment"><div class="line">LudeoManager.GetGameplayDefinitionsKeys(LudeoParam paramType, out </div>
 <div class="line"><span class="keywordtype">string</span>[] keys)</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitions(LudeoParam, out string[])</a> for more info.</p><ul>
-<li>then call:</li>
-</ul>
+</div><!-- fragment --><p> and:</p>
 <div class="fragment"><div class="line">LudeoManager.GetGameplayDefinition(LudeoParam paramType, out value)</div>
-</div><!-- fragment --><ul>
-<li>These will give you the definitions kept in a previously created and downloaded Ludeo.</li>
-</ul>
-<p>See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a93d9d128fac49eae30bd84cd576ef493">GetGameplayDefinition(LudeoParam, out value)</a> for more info.</p><ul>
-<li>On receiving <code>WaitingForReadyForGameplay</code> and when your gameplay is ready to start call:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;These will give you the definitions kept in a previously created and downloaded Ludeo.</p>
+<p>&#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a732fafb70e96054616a7f2dcf4bd331d">GetGameplayDefinitions(LudeoParam, out string[])</a> for more info.</p>
+<p>&#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a93d9d128fac49eae30bd84cd576ef493">GetGameplayDefinition(LudeoParam, out value)</a> for more info.</p>
+<p><b>5.</b>&#160;On receiving <code>WaitingForReadyForGameplay</code> and when your gameplay is ready to start call:</p>
 <div class="fragment"><div class="line">LudeoManager.ReadyForGameplay()</div>
-</div><!-- fragment --><p> For instance: when you are done loading the game data and before showing your game match countdown.</p>
-<p>See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay()</a> for more info. </p>
-<h3><a class="anchor" id="autotoc_md32"></a>
-Step 3: Objective Popup</h3>
-<p>When playing a Ludeo, LudeoSDK will popup a Ludeo objective screen. Once the player has clicked the button to Start Ludeo, LudeoSDK will fire the state in the next step listed below. </p><div class="image">
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;For instance: when you are done loading the game data and before showing your game match countdown.</p>
+<p>&#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a2938bc9aca68385a19d8bfc448116394">ReadyForGameplay()</a> for more info.</p>
+<p><b>6.</b>&#160;When playing a Ludeo, LudeoSDK will popup a Ludeo objective screen. Once the player has clicked the button to Start Ludeo, LudeoSDK will fire the state in the next step listed below. </p><div class="image">
 <img src="image1.png" alt=""/>
 </div>
-<ul>
-<li>On receiving <code>WaitingForGameplayBegin</code> and when your gameplay is beginning or counting down before beginning as in the above example call:</li>
-</ul>
+<p><b>7.</b>&#160;On receiving <code>WaitingForGameplayBegin</code> and when your gameplay is beginning or counting down before beginning as in the above example call:</p>
 <div class="fragment"><div class="line">LudeoManager.BeginGameplay()</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay()</a> for more info.</p><ul>
-<li>Now that your game is running you should feed the LudeoSDK with the same game state variables you have used in the Creator Flow so that Ludeo tracks the Ludeo game progress:</li>
-</ul>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a5a2711f465756515c5f736ae4b518eae">BeginGameplay()</a> for more info.</p>
+<p><b>8.</b>&#160;Now that your game is running you should feed the LudeoSDK with the same game state variables you have used in the Creator Flow so that Ludeo tracks the Ludeo game progress:</p>
 <div class="fragment"><div class="line">LudeoManager.SetGameplayVariable(<span class="keywordtype">string</span>, value)</div>
-</div><!-- fragment --><p> See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayVariable(string, value)</a> for more info </p>
-<h3><a class="anchor" id="autotoc_md33"></a>
-Step 4: Summary</h3>
-<p>Once a Ludeo is over (when an End Condition or a Goal is met), LudeoSDK pops the Ludeo End Screen, such as: </p><div class="image">
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ad21c8c94907caeb05716f8ee57b48348">SetGameplayVariable(string, value)</a> for more info</p>
+<p><b>9.</b>&#160;Once a Ludeo is over (when an End Condition or a Goal is met), LudeoSDK pops the Ludeo End Screen, such as: </p><div class="image">
 <img src="image2.png" alt=""/>
 </div>
-<p> If a player clicks the “You just scored…” or “i” icon, they will be presented with the following “Score breakdown” popup: </p><div class="image">
+<p> &#160;&#160;&#160;&#160;If a player clicks the “You just scored…” or “i” icon, they will be presented with the following “Score breakdown” popup: </p><div class="image">
 <img src="image3.png" alt=""/>
 </div>
-<ul>
-<li>If the player clicks “Play Again” or if the Ludeo was automatically restarted, LudeoSDK fires <code>WaitingForLoadGameplayData</code> (back to step 3).</li>
-<li>If the player clicks “You just scored…” or “I” icon, LudeoSDK fires: <code>WaitingForUserInteraction</code>. </li>
-</ul>
+<p><b>10.</b>&#160;If the player clicks “Play Again” or if the Ludeo was automatically restarted, LudeoSDK fires <code>WaitingForLoadGameplayData</code> (back to step 3).</p>
+<p><b>11.</b>&#160;If the player clicks “You just scored…” or “I” icon, LudeoSDK fires: <code>WaitingForUserInteraction</code>. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 </div><!-- doc-content -->

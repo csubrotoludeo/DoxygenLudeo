@@ -27,33 +27,21 @@ var NAVTREE =
   [ "Ludeo SDK", "index.html", [
     [ "Introduction", "index.html", "index" ],
     [ "Adding Ludeo to Your Game", "integrartion.html", [
-      [ "Initializations and Setup", "integrartion.html#initializations", [
+      [ "Setup and Install", "integrartion.html#initializations", [
         [ "Prerequisites", "integrartion.html#autotoc_md19", null ],
-        [ "Integration", "integrartion.html#autotoc_md20", [
-          [ "Step 1: Import Ludeo SDK Unity Package", "integrartion.html#autotoc_md21", null ],
-          [ "Step 2: Integrate Your Game with Our SDK", "integrartion.html#autotoc_md22", null ],
-          [ "Step 3: Initialize LudeoSDK", "integrartion.html#autotoc_md23", null ]
+        [ "Add The Ludeo Unity Package To Your Project", "integrartion.html#autotoc_md20", null ],
+        [ "Integrate with Ludeo Development Kit (LudeoSDK)", "integrartion.html#autotoc_md21", [
+          [ "Initializations and Setup", "integrartion.html#autotoc_md22", null ]
         ] ]
       ] ],
       [ "User Flows", "integrartion.html#section3", [
-        [ "Creator Flow", "integrartion.html#autotoc_md24", [
-          [ "Step 1: Launch the Game", "integrartion.html#autotoc_md25", null ],
-          [ "Step 2: Play the Game", "integrartion.html#autotoc_md26", null ],
-          [ "Step 3: Capture the Highlight", "integrartion.html#autotoc_md27", null ],
-          [ "Step 4: End the Game", "integrartion.html#autotoc_md28", null ]
-        ] ],
-        [ "Player Flow", "integrartion.html#autotoc_md29", [
-          [ "Step 1: Play the Game", "integrartion.html#autotoc_md30", null ],
-          [ "Step 2: Launch Ludeo", "integrartion.html#autotoc_md31", null ],
-          [ "Step 3: Objective Popup", "integrartion.html#autotoc_md32", null ],
-          [ "Step 4: Summary", "integrartion.html#autotoc_md33", null ]
-        ] ]
+        [ "Creator Flow", "integrartion.html#autotoc_md23", null ],
+        [ "Player Flow", "integrartion.html#autotoc_md24", null ]
       ] ]
     ] ],
     [ "Classes", "annotated.html", [
       [ "Class List", "annotated.html", "annotated_dup" ],
       [ "Class Functions", "functions.html", [
-        [ "All", "functions.html", null ],
       ] ]
     ] ]
   ] ]

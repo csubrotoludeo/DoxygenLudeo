@@ -125,6 +125,12 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html">LudeoManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">This is the Ludeo Manager Class. Ludeo Manager includes all of the necessary methods for enabling Ludeo features that have been integrated into your game.  <a href="class_ludeo_s_d_k_1_1_ludeo_manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ludeo SDK Quaternion value state.  <a href="struct_ludeo_s_d_k_1_1_quatern.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_ludeo_s_d_k_1_1_vec3.html">Vec3</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ludeo SDK 3D Vector value state.  <a href="struct_ludeo_s_d_k_1_1_vec3.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -139,7 +145,7 @@ Enumerations</h2></td></tr>
 , <b>Error</b> =2
 , <b>Off</b> =3
  }</td></tr>
-<tr class="memdesc:a4816548b54861199025f30544dc2c4e1"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="namespace_ludeo_s_d_k.html">LudeoSDK</a> logging level. <br /></td></tr>
+<tr class="memdesc:a4816548b54861199025f30544dc2c4e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ludeo SDK logging level. <br /></td></tr>
 <tr class="separator:a4816548b54861199025f30544dc2c4e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e540b890d69085c8f0ed6b86532d450"><td class="memItemLeft" align="right" valign="top"><a id="a5e540b890d69085c8f0ed6b86532d450" name="a5e540b890d69085c8f0ed6b86532d450"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespace_ludeo_s_d_k.html#a5e540b890d69085c8f0ed6b86532d450">LudeoParam</a> { <br />
 &#160;&#160;<b>Bool</b> = 0
@@ -148,6 +154,7 @@ Enumerations</h2></td></tr>
 , <b>Vec3</b>
 , <br />
 &#160;&#160;<b>String</b>
+, <b>Quatern</b>
 , <b>Objects</b>
 <br />
  }</td></tr>
@@ -188,9 +195,10 @@ Enumerations</h2></td></tr>
 &#160;&#160;<b>GameplayAborted</b>
 , <b>ModeOver</b>
 , <b>ScreenDisplayed</b>
-, <b>Error</b>
+, <b>WaitingForUserInteraction</b>
 , <br />
-&#160;&#160;<b>WaitingForUserInteraciton</b>
+&#160;&#160;<b>LudeoOver</b>
+, <b>Error</b>
 <br />
  }</td></tr>
 <tr class="memdesc:ac1102afccace80ee8aac5dfedfd30ab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">The Flow State in Ludeo SDK. <br /></td></tr>
@@ -227,7 +235,7 @@ Enumerations</h2></td></tr>
 , <br />
 &#160;&#160;<b>Error_Invalid_Token</b>
 , <b>Error_Logger_Init_Failed</b>
-, <b>Error_Ludeo_Duration_Set_Too_Short</b>
+, <b>Warning_Highlight_Duration_Too_Short</b>
 , <b>Warning_Unhandled</b>
 , <br />
 &#160;&#160;<b>Warning_Out_Of_Turns_Mem</b>

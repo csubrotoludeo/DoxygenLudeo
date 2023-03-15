@@ -110,13 +110,15 @@ $(document).ready(function(){initNavTree('struct_ludeo_s_d_k_1_1_quatern.html','
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="struct_ludeo_s_d_k_1_1_quatern-members.html">List of all members</a>  </div>
   <div class="headertitle"><div class="title">LudeoSDK.Quatern Struct Reference</div></div>
 </div><!--header-->
 <div class="contents">
 
-<p>Quaternion.  
+<p>Ludeo SDK Quaternion value state.  
  <a href="struct_ludeo_s_d_k_1_1_quatern.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
@@ -127,6 +129,24 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a8fb0e11e6ab0e95ca6e90d681037d258"><td class="memItemLeft" align="right" valign="top"><a id="a8fb0e11e6ab0e95ca6e90d681037d258" name="a8fb0e11e6ab0e95ca6e90d681037d258"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>Set</b> (float x, float y, float z, float w)</td></tr>
 <tr class="separator:a8fb0e11e6ab0e95ca6e90d681037d258"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af9d6064d5a10a4a534db91e765031c82"><td class="memItemLeft" align="right" valign="top"><a id="af9d6064d5a10a4a534db91e765031c82" name="af9d6064d5a10a4a534db91e765031c82"></a>
+override string&#160;</td><td class="memItemRight" valign="bottom"><b>ToString</b> ()</td></tr>
+<tr class="separator:af9d6064d5a10a4a534db91e765031c82"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:a4cd2988bd0563252e5b2f9559ebfef33"><td class="memItemLeft" align="right" valign="top"><a id="a4cd2988bd0563252e5b2f9559ebfef33" name="a4cd2988bd0563252e5b2f9559ebfef33"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator==</b> (<a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> lhs, <a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> rhs)</td></tr>
+<tr class="separator:a4cd2988bd0563252e5b2f9559ebfef33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7555572bf5dcb2902b502930e37d1371"><td class="memItemLeft" align="right" valign="top"><a id="a7555572bf5dcb2902b502930e37d1371" name="a7555572bf5dcb2902b502930e37d1371"></a>
+static bool&#160;</td><td class="memItemRight" valign="bottom"><b>operator!=</b> (<a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> lhs, <a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> rhs)</td></tr>
+<tr class="separator:a7555572bf5dcb2902b502930e37d1371"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8d9349208ea1b4ffa27bd59d99bf06d3"><td class="memItemLeft" align="right" valign="top"><a id="a8d9349208ea1b4ffa27bd59d99bf06d3" name="a8d9349208ea1b4ffa27bd59d99bf06d3"></a>
+static float&#160;</td><td class="memItemRight" valign="bottom"><b>Dot</b> (<a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> lhs, <a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> rhs)</td></tr>
+<tr class="separator:a8d9349208ea1b4ffa27bd59d99bf06d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a04f35766c1129e190b2a91955260b021"><td class="memItemLeft" align="right" valign="top"><a id="a04f35766c1129e190b2a91955260b021" name="a04f35766c1129e190b2a91955260b021"></a>
+unsafe static bool&#160;</td><td class="memItemRight" valign="bottom"><b>TryParse</b> (string quaternAsString, out <a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a> value)</td></tr>
+<tr class="separator:a04f35766c1129e190b2a91955260b021"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-attribs" name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -142,9 +162,15 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>z</b></td></tr>
 <tr class="memitem:a8768f6a80336c7a2ab928c24606bd8d7"><td class="memItemLeft" align="right" valign="top"><a id="a8768f6a80336c7a2ab928c24606bd8d7" name="a8768f6a80336c7a2ab928c24606bd8d7"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>w</b></td></tr>
 <tr class="separator:a8768f6a80336c7a2ab928c24606bd8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-attribs" name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:aa01abca9b0b4938e8e4dd5221366ca2a"><td class="memItemLeft" align="right" valign="top"><a id="aa01abca9b0b4938e8e4dd5221366ca2a" name="aa01abca9b0b4938e8e4dd5221366ca2a"></a>
+static readonly <a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a>&#160;</td><td class="memItemRight" valign="bottom"><b>Identity</b> = new <a class="el" href="struct_ludeo_s_d_k_1_1_quatern.html">Quatern</a>(0.0f, 0.0f, 0.0f, 1.0f)</td></tr>
+<tr class="separator:aa01abca9b0b4938e8e4dd5221366ca2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Quaternion. </p>
+<div class="textblock"><p>Ludeo SDK Quaternion value state. </p>
 </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
