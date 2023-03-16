@@ -123,11 +123,11 @@ Prerequisites</h2>
 <li>Get <b>Game Steam Id</b> from your Steam game launcher.</li>
 </ul>
 <h2><a class="anchor" id="autotoc_md20"></a>
-Add The Ludeo Unity Package To Your Project</h2>
+Add Ludeo Unity Package To Your Project</h2>
 <p><b>1.</b>&#160;Download the LudeoSDK Unity package.<br  />
  <b>2.</b>&#160;Import the Unity package into your project.<br  />
  <b>3.</b>&#160;Upon opening the package you should see the following import dialog: </p><div class="image">
-<img src="import.png" alt=""/>
+<img src="integration1.gif" alt=""/>
 </div>
 <p> <b>4.</b>&#160;Once Imported you can start integrating the Ludeo Development Kit.</p>
 <h2><a class="anchor" id="autotoc_md21"></a>
@@ -142,7 +142,7 @@ Initializations and Setup</h3>
 <div class="line">”Game Version”: &lt;replace with your game version&gt;</div>
 <div class="line">”Platform Url”: &lt;use the default unless you have got a specific one from Ludeo&gt;</div>
 </div><!-- fragment --><div class="image">
-<img src="initializations.png" alt=""/>
+<img src="integration2.gif" alt=""/>
 </div>
 <p><b>2.</b>&#160;In order to initialize LudeoSDK, you need to call the supplied init method once: </p><div class="fragment"><div class="line">LudeoManager.Init(<span class="keywordtype">string</span> launcherUserID, </div>
 <div class="line">                    LudeoLauncher launcher, </div>
@@ -166,8 +166,8 @@ Creator Flow</h2>
 </div>
 <p> Creator Flow is the flow which enables Ludeos creation. Integrate your game with it by following these steps:</p>
 <p><b>1.</b>&#160;On receiving <code>WaitingForLoadGameplayData</code> and when your are ready call:</p>
-<div class="fragment"><div class="line">LudeoManager.GameplayDataReady() </div>
-</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">GameplayDataReady()</a> for more info.</p>
+<div class="fragment"><div class="line">LudeoManager.LoadGameplayData() </div>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a8b7e258abf712f6c7ab7cd848d4d6676">LoadGameplayData()</a> for more info.</p>
 <p><b>2.</b>&#160;On receiving <code>WaitingForSetGameplayDefinitions</code> call:</p>
 <div class="fragment"><div class="line">LudeoManager.SetGameplayDefinitions(GameplayDefinitions)</div>
 </div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#a3d90b89bfcd056e485183495d8cd7697">SetGameplayDefinitions(GameplayDefinitions)</a> for more info.</p>
@@ -210,8 +210,8 @@ Player Flow</h2>
 <div class="line">COMMAND_LINE_STRING_BUFFER_SIZE);</div>
 <div class="line">string[] args = commandLineArgs.Split(SPLIT_CHAR);</div>
 </div><!-- fragment --><p><b>3.</b>&#160;Now that you’ve followed the previous steps, when receiving the <code>WaitingForLoadGameplayData</code>, you have the Ludeo Id so you can use it to call:</p>
-<div class="fragment"><div class="line">LudeoManager.GameplayDataReady(Guid ludeoId)</div>
-</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="namespace_ludeo_s_d_k.html#ac1102afccace80ee8aac5dfedfd30ab7">GameplayDataReady(Guid)</a> for more info</p>
+<div class="fragment"><div class="line">LudeoManager.LoadGameplayData(Guid ludeoId)</div>
+</div><!-- fragment --><p> &#160;&#160;&#160;&#160;See <a class="el" href="class_ludeo_s_d_k_1_1_ludeo_manager.html#ae10197596a2b7ad905cde67258705f93">LoadGameplayData(Guid)</a> for more info</p>
 <p><b>4.</b>&#160;On receiving <code>WaitingForGetGameplayDefinitions</code> call:</p>
 <div class="fragment"><div class="line">LudeoManager.GetGameplayDefinitionsKeys(LudeoParam paramType, out </div>
 <div class="line"><span class="keywordtype">string</span>[] keys)</div>
